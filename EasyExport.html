@@ -41,7 +41,30 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Addons</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">EasyExport</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EasyExport</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#promptless">Promptless</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prompt">Prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-naming">Auto Naming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#export-path">Export Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#presets">Presets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-object-naming">Multi-Object Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#separate-all-actions">Separate All Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-leaf-bones">Use Leaf Bones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mesh-library">Mesh Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-objects">Adding objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-objects">Retrieving objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ModelingTools">ModelingTools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SceneOrganizer">SceneOrganizer</a></li>
 </ul>
@@ -69,9 +92,146 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="easyexport">
+  <a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/releases/latest"><img alt="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport?color=2980b9" src="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport?color=2980b9" /></a>
+<a class="reference external image-reference" href="https://github.com/BlakeDarrow/DarrowTools/actions/workflows/pages/pages-build-deployment"><img alt="https://img.shields.io/github/workflow/status/BlakeDarrow/DarrowTools/build-sphinx-to-gh-pages?label=docs" src="https://img.shields.io/github/workflow/status/BlakeDarrow/DarrowTools/build-sphinx-to-gh-pages?label=docs" /></a>
+<a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/commits/main"><img alt="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" src="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" /></a>
+<img alt="https://img.shields.io/github/downloads/BlakeDarrow/EasyExport/total?color=9b9b9b" src="https://img.shields.io/github/downloads/BlakeDarrow/EasyExport/total?color=9b9b9b" />
+<hr><section id="easyexport">
 <h1>EasyExport<a class="headerlink" href="#easyexport" title="Permalink to this headline"></a></h1>
-<p>Todo</p>
+<script type="text/javascript">
+    <!-- Adds target=_blank to external links -->
+
+    $(document).ready(function () {
+    $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').attr('target', '_blank');
+    });
+</script><p>Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard export options for both Unreal and Unity, this tools allows you to easily export your selected objects with the correct object name – by default.</p>
+<p><a class="reference internal" href="#fbxtag"><span class="std std-ref">Usage</span></a> |
+<a class="reference internal" href="#exportsettings"><span class="std std-ref">Settings</span></a> |
+<a class="reference internal" href="#librarytag"><span class="std std-ref">Mesh Library</span></a> |
+<a class="reference internal" href="#downloadexportertag"><span class="std std-ref">Download</span></a> |
+<a class="reference internal" href="#install"><span class="std std-ref">Installation</span></a></p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+   <iframe src="https://www.youtube-nocookie.com/embed/TDyYM4R-OYI" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+<hr><section id="download">
+<span id="downloadexportertag"></span><h2>Download<a class="headerlink" href="#download" title="Permalink to this headline"></a></h2>
+<p><a class="reference external" href="https://github.com/BlakeDarrow/EasyExport/releases/latest">Latest Release</a> | <a class="reference external" href="https://github.com/BlakeDarrow/EasyExport/tree/main/EasyExport">Source</a></p>
+<hr></section>
+<section id="installation">
+<span id="install"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p>Download the latest release from github.</p></li>
+<li><p>Under addon preferences in Blender, click ‘install’ and the select the recently downloaded zip file.</p></li>
+<li><p>Enable the addon</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Sometimes you might get an error when installing saying there isn’t a module named “EasyExport”, restart Blender and try enabling the addon again.</p>
+</div>
+<hr></section>
+<section id="usage">
+<span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<section id="promptless">
+<h3>Promptless<a class="headerlink" href="#promptless" title="Permalink to this headline"></a></h3>
+<p>If the <em>Promptless Export</em> boolean is checked, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.
+Reference <a class="reference internal" href="#export-path"><span class="std std-ref">Export Path</span></a></p>
+<ol class="arabic simple">
+<li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
+<li><p><strong>Input desired export path</strong> in required path field (only first time)</p></li>
+<li><p><strong>Hit *Export Selection*</strong></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Under the hood, the button in the UI is actual changing, so if you add the <em>Export Selection</em> button to your quick favorites, it will be linked to whatever state the promptless bool is in.</p>
+</div>
+</section>
+<section id="prompt">
+<h3>Prompt<a class="headerlink" href="#prompt" title="Permalink to this headline"></a></h3>
+<p>If the <em>Promptless Export</em> boolean is <strong>NOT</strong> checked, the <em>Export Selection</em> button will prompt the user for a file path to export every time.</p>
+<ol class="arabic simple">
+<li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
+<li><p><strong>Hit *Export Selection*</strong></p></li>
+<li><p>Navigate to folder destination</p></li>
+<li><p><strong>Select *Export Selection*</strong> in the pop-up</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please do not attempt to change the export name in the file browser. Whatever name you type in will be added to the output name on export, leaving you with an incorrect .fbx file name.</p>
+</div>
+</section>
+<section id="auto-naming">
+<h3>Auto Naming<a class="headerlink" href="#auto-naming" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>If you are using the prompted exporter, don’t worry about filling out the name in Blenders exporter. This tool will automatically use the name of your selected mesh.</p></li>
+<li><p>If you are using the promptless method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><strong>Prefix and suffix naming.</strong></div>
+<div class="line">Looking for different naming conventions? Try using the “Prefix” and “Suffix” options. These custom options include settings like mesh export counting and custom prefix words, like “assets”.</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, selecting multiple objects will export them as one mesh, using the name of the <em>active</em> collection. This is not necessarily the parent collection of the objects. Make sure to select your parent collection when using this method.</p>
+</div>
+<hr></section>
+</section>
+<section id="settings">
+<span id="exportsettings"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline"></a></h2>
+<p><em>To show advanced options, toggle the cogwheel in the panel menu.</em></p>
+<section id="export-path">
+<h3>Export Path<a class="headerlink" href="#export-path" title="Permalink to this headline"></a></h3>
+<p>Found underneath the <em>Prefix</em> and <em>Suffix</em> options, selecting the folder icon next to the string will prompt the user for a destination path. This path is shared between blender scene.</p>
+</section>
+<section id="presets">
+<h3>Presets<a class="headerlink" href="#presets" title="Permalink to this headline"></a></h3>
+<p>Unreal and Unity “standard” export options. The exported models imported into Unity/Unreal will have correct orientations and scale. Animations “should” also work, but additional animation settings will be available soon. If you encounter problems with exporting (animation included) please reach out and let me know.</p>
+</section>
+<section id="multi-object-naming">
+<h3>Multi-Object Naming<a class="headerlink" href="#multi-object-naming" title="Permalink to this headline"></a></h3>
+<div class="line-block">
+<div class="line"><strong>–Found under advanced settings–</strong></div>
+<div class="line">When exporting multiple objects as one mesh, the final name will be the active collections name. Make sure to set the correct collection as active when this bool is enabled.</div>
+</div>
+</section>
+<section id="separate-all-actions">
+<h3>Separate All Actions<a class="headerlink" href="#separate-all-actions" title="Permalink to this headline"></a></h3>
+<div class="line-block">
+<div class="line"><strong>–Found under advanced settings–</strong></div>
+<div class="line">Blender’s export setting for exporting all animations separately.</div>
+</div>
+</section>
+<section id="use-leaf-bones">
+<h3>Use Leaf Bones<a class="headerlink" href="#use-leaf-bones" title="Permalink to this headline"></a></h3>
+<div class="line-block">
+<div class="line"><strong>–Found under advanced settings–</strong></div>
+<div class="line">Add a leaf bone to the end of the chain on export.</div>
+</div>
+<hr></section>
+</section>
+<section id="mesh-library">
+<span id="librarytag"></span><h2>Mesh Library<a class="headerlink" href="#mesh-library" title="Permalink to this headline"></a></h2>
+<p>Managing you objects(currently mesh data only) has never been easier. With a click of the button, your mesh is stored in a local folder, for easy importing.</p>
+<section id="adding-objects">
+<h3>Adding objects<a class="headerlink" href="#adding-objects" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>Select “Add”</p></li>
+<li><p>Hit “Add to Library”</p></li>
+</ol>
+</section>
+<section id="retrieving-objects">
+<h3>Retrieving objects<a class="headerlink" href="#retrieving-objects" title="Permalink to this headline"></a></h3>
+<p>Don’t worry, getting the mesh back into a blend scene is just as easy!</p>
+<ol class="arabic simple">
+<li><p>Select “Get”</p></li>
+<li><p>Navigate the drop down panel titled “Get from library”</p></li>
+<li><p>Select your desired mesh!</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To navigate to the thumbnail and object folders, hit the cogwheel in the panel, and select the corresponding button.</p>
+</div>
+<hr></section>
+</section>
 </section>
 
 
