@@ -57,8 +57,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#object-sorting">Object Sorting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#viewport-options">Viewport Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scene-object-sorting">Scene Object Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewport-display-options">Viewport Display Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#outliner-options">Outliner Options</a></li>
 </ul>
 </li>
@@ -93,14 +93,14 @@
 <a class="reference external image-reference" href="https://github.com/BlakeDarrow/SceneOrganizer/commits/main"><img alt="https://img.shields.io/github/last-commit/BlakeDarrow/SceneOrganizer" src="https://img.shields.io/github/last-commit/BlakeDarrow/SceneOrganizer" /></a>
 <hr><section id="sceneorganizer">
 <h1>SceneOrganizer<a class="headerlink" href="#sceneorganizer" title="Permalink to this headline"></a></h1>
-<p>SceneOrganizer is….</p>
-<p><a class="reference internal" href="#sorting"><span class="std std-ref">Object Sorting</span></a> |
-<a class="reference internal" href="#viewport"><span class="std std-ref">Viewport Options</span></a> |
+<p>SceneOrganizer is simple tool that allows the user to manage some display options such as hide/un-hide boolean cutters and empties, sort objects into new collections by type, and outliner collection sorting.</p>
+<p><a class="reference internal" href="#sorting"><span class="std std-ref">Scene Object Sorting</span></a> |
+<a class="reference internal" href="#viewport"><span class="std std-ref">Viewport Display Options</span></a> |
 <a class="reference internal" href="#outliner"><span class="std std-ref">Outliner Options</span></a> |
 <a class="reference internal" href="#downloadscenetag"><span class="std std-ref">Download</span></a> |
 <a class="reference internal" href="#installscenetag"><span class="std std-ref">Installation</span></a></p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-   <iframe src="https://www.youtube-nocookie.com/embed/TDyYM4R-OYI" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+   <iframe src="https://www.youtube-nocookie.com/embed/EOLpj38DQwU" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 <hr><section id="download">
 <span id="downloadscenetag"></span><h2>Download<a class="headerlink" href="#download" title="Permalink to this headline"></a></h2>
@@ -120,14 +120,38 @@
 <hr></section>
 <section id="usage">
 <span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
-<section id="object-sorting">
-<span id="sorting"></span><h3>Object Sorting<a class="headerlink" href="#object-sorting" title="Permalink to this headline"></a></h3>
+<section id="scene-object-sorting">
+<span id="sorting"></span><h3>Scene Object Sorting<a class="headerlink" href="#scene-object-sorting" title="Permalink to this headline"></a></h3>
+<p><strong>Booleans and/or Empties</strong></p>
+<ul class="simple">
+<li><p>Selecting either button option will grab all objects by selected type, and move them into a new collection for ease of access and outliner sorting.</p></li>
+</ul>
 </section>
-<section id="viewport-options">
-<span id="viewport"></span><h3>Viewport Options<a class="headerlink" href="#viewport-options" title="Permalink to this headline"></a></h3>
+<section id="viewport-display-options">
+<span id="viewport"></span><h3>Viewport Display Options<a class="headerlink" href="#viewport-display-options" title="Permalink to this headline"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All viewport display options are toggleable. Selecting a button will either hide or un-hide by desired type.</p>
+</div>
+<p><strong>Empties and/or Booleans</strong></p>
+<p>Selecting either booleans or empties will change the desired visibility of those objects by type.</p>
+<p><strong>Random and/or Material</strong></p>
+<p>Random or material will either show a random color by mesh, or the mesh’s material. Either/or operation, both cannot be true.</p>
+<p><strong>Wireframe</strong></p>
+<p>Wireframe operation will hide all viewport overlays, and only show the mesh’s’ with their respective wireframes.</p>
 </section>
 <section id="outliner-options">
 <span id="outliner"></span><h3>Outliner Options<a class="headerlink" href="#outliner-options" title="Permalink to this headline"></a></h3>
+<p><strong>Collapse</strong></p>
+<p>Collapses all collections within the outliner. Button also available inside outliner context header</p>
+<p><strong>Sort</strong></p>
+<p>Sort all objects and collections alphabetically. Button also available inside outliner context header</p>
+<p><strong>“_Low” or “_High”</strong></p>
+<p>Adds respective suffix to all of the selection, and strips additional excess characters, and converts “.” to “_”</p>
+<p><strong>Strip</strong></p>
+<p>Removes excess numbers and suffix’s as well as converting “.” to “_”</p>
+<p><strong>Icons Only</strong></p>
+<p>Shows only the icons for custom buttons in header</p>
 </section>
 </section>
 </section>
