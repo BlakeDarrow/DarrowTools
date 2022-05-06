@@ -57,7 +57,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#scene-object-sorting">Scene Object Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-sorting-by-type">Object Sorting by Type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#viewport-display-options">Viewport Display Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#outliner-options">Outliner Options</a></li>
 </ul>
@@ -94,7 +94,7 @@
 <hr><section id="sceneorganizer">
 <h1>SceneOrganizer<a class="headerlink" href="#sceneorganizer" title="Permalink to this headline"></a></h1>
 <p>SceneOrganizer is simple tool that allows the user to manage some display options such as hide/un-hide boolean cutters and empties, sort objects into new collections by type, and outliner collection sorting.</p>
-<p><a class="reference internal" href="#sorting"><span class="std std-ref">Scene Object Sorting</span></a> |
+<p><a class="reference internal" href="#sorting"><span class="std std-ref">Object Sorting by Type</span></a> |
 <a class="reference internal" href="#viewport"><span class="std std-ref">Viewport Display Options</span></a> |
 <a class="reference internal" href="#outliner"><span class="std std-ref">Outliner Options</span></a> |
 <a class="reference internal" href="#downloadscenetag"><span class="std std-ref">Download</span></a> |
@@ -120,26 +120,34 @@
 <hr></section>
 <section id="usage">
 <span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
-<section id="scene-object-sorting">
-<span id="sorting"></span><h3>Scene Object Sorting<a class="headerlink" href="#scene-object-sorting" title="Permalink to this headline"></a></h3>
-<p><strong>Booleans and/or Empties</strong></p>
-<ul class="simple">
-<li><p>Selecting either button option will grab all objects by selected type, and move them into a new collection for ease of access and outliner sorting.</p></li>
-</ul>
-</section>
+<section id="object-sorting-by-type">
+<span id="sorting"></span><h3>Object Sorting by Type<a class="headerlink" href="#object-sorting-by-type" title="Permalink to this headline"></a></h3>
+<p><strong>Booleans</strong> // <strong>Empties</strong></p>
+<p>Selecting either button option will grab all objects by selected type, and move them into a new collection for ease of access and outliner sorting.</p>
+<p>The new collection name will either be “Darrow_Booleans” or “Darrow_Empties”</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tools will work recursively! New collections will not be created, objects will be added to the existing collection after first run.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Additional type sorting will be added soon! If you have any suggestions please contact me at, <a class="reference external" href="mailto:support&#37;&#52;&#48;darrow&#46;tools">support<span>&#64;</span>darrow<span>&#46;</span>tools</a>.</p>
+</div>
+<hr></section>
 <section id="viewport-display-options">
 <span id="viewport"></span><h3>Viewport Display Options<a class="headerlink" href="#viewport-display-options" title="Permalink to this headline"></a></h3>
+<p><strong>Empties</strong> // <strong>Booleans</strong></p>
+<p>Selecting either “booleans” or “empties” will change the desired visibility of those objects by type within the viewport.
+“Empties” will work with anything created under the object type of empty. And “Booleans” will work with any object set to to display visibility of “BOUNDS”</p>
+<p><strong>Random</strong> // <strong>Material</strong></p>
+<p>Random or material will either show a random color by mesh, or the mesh’s material. Either/or operation, both cannot be true.</p>
+<p><strong>Wireframe</strong></p>
+<p>Wireframe operation will hide all viewport overlays, and only show the mesh’s’ with their respective wireframes.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All viewport display options are toggleable. Selecting a button will either hide or un-hide by desired type.</p>
 </div>
-<p><strong>Empties and/or Booleans</strong></p>
-<p>Selecting either booleans or empties will change the desired visibility of those objects by type.</p>
-<p><strong>Random and/or Material</strong></p>
-<p>Random or material will either show a random color by mesh, or the mesh’s material. Either/or operation, both cannot be true.</p>
-<p><strong>Wireframe</strong></p>
-<p>Wireframe operation will hide all viewport overlays, and only show the mesh’s’ with their respective wireframes.</p>
-</section>
+<hr></section>
 <section id="outliner-options">
 <span id="outliner"></span><h3>Outliner Options<a class="headerlink" href="#outliner-options" title="Permalink to this headline"></a></h3>
 <p><strong>Collapse</strong></p>
