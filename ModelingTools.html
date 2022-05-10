@@ -125,20 +125,84 @@
 <hr></section>
 <section id="usage">
 <span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<p>Functions can be found under: DarrowTools Sidepanel –&gt; ModelingTools –&gt; <em>Respective dropdown menu</em></p>
 <section id="mesh-tools">
 <span id="meshtool"></span><h3>Mesh Tools<a class="headerlink" href="#mesh-tools" title="Permalink to this headline"></a></h3>
-</section>
+<p>Quality of life panel location for numerous Blender Internal Operations. Evergrowing collection of buttons that are useful for a quick modeling workflow.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Mesh Tool operations can change depending on the viewport context.</p>
+</div>
+<p><strong>Origin</strong></p>
+<p>Moves the selected object to the word origin, utilizing the selected objects origin point.</p>
+<p><strong>Transforms</strong></p>
+<p>Applies location, rotation, and scale transforms to the selected object. Internal Blender operation.</p>
+<p><strong>Cleanup</strong></p>
+<p>Quick access for custom cleaning of selected objects. Removes doubles, deletes loose objects, and converts ngons to quads/tris.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#cleans"><span class="std std-ref">Cleanup Mesh</span></a></p>
+</div>
+<p><strong>Normals</strong></p>
+<p>Recalculates the selected mesh normals to be outside. Internal Blender operation.</p>
+<p><strong>Smooth</strong></p>
+<ul class="simple">
+<li><p>Enables Smooth Shading for your selected object</p></li>
+<li><p>Sets auto-smooth factor to 180 Degrees</p></li>
+</ul>
+<p><strong>Sharp</strong></p>
+<ul class="simple">
+<li><p>Enables Smooth Shading for your selected object</p></li>
+<li><p>Sets auto-smooth factor to 66 Degrees</p></li>
+</ul>
+<hr></section>
 <section id="orientations">
 <span id="transform"></span><h3>Orientations<a class="headerlink" href="#orientations" title="Permalink to this headline"></a></h3>
-</section>
+<p>Transform Orientations offers an easy to get to panel that expands Blender’s default capability. Adds a “Clear” operation to remove excess clutter in transform dropdown menu.</p>
+<p><strong>Set</strong></p>
+<ol class="arabic simple">
+<li><p>Select either an <strong>edge, face or object</strong></p></li>
+<li><p>Select the <strong>“Set”</strong> button</p></li>
+</ol>
+<p>Assuming a valid selection, the selection will be added as the new transformation orientation. Internal Blender Operation.</p>
+<p><strong>Clear</strong></p>
+<ol class="arabic simple">
+<li><p>Select “Clear”</p></li>
+</ol>
+<p>This will run through every custom orientation and delete it from the available options.</p>
+<hr></section>
 <section id="circular-array">
 <span id="circular"></span><h3>Circular Array<a class="headerlink" href="#circular-array" title="Permalink to this headline"></a></h3>
-</section>
+<p>Circular Array will array the selected mesh around the cursor’s current location. So how ever far away the selected mesh is, that is the radius of the circle used to array. This tool is non-destructive so the values can be changed on the fly.</p>
+<ol class="arabic simple">
+<li><p><strong>Select</strong> your object</p></li>
+<li><p>Set the desired <strong>amount</strong> of array elements in the sidebar panel</p></li>
+<li><p>Select an <strong>axis</strong> to array along (only one axis can be selected)</p></li>
+<li><p>Hit <strong>“Array Selected”</strong></p></li>
+</ol>
+<p>To change the array amount, simply reselect the object, change the amount in the panel, and hit “Array Selected” again! This will also recalculate the positions of the arrayed object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When duplicating a mesh that has a “DarrowToolkitArray” modifier on it, the data will not always update accordingly. To fix this, either create a new mesh, or apply the modifier before duplicating.</p>
+</div>
+<hr></section>
 <section id="cleanup-mesh">
 <span id="cleans"></span><h3>Cleanup Mesh<a class="headerlink" href="#cleanup-mesh" title="Permalink to this headline"></a></h3>
-</section>
+<p>The cleanup mesh tool will run through a few of Blender’s standard clean-up menu operations with the hope of streamlining this process.</p>
+<ol class="arabic simple">
+<li><p>Set your desired <strong>merge distance</strong> for vertices. Higher numbers will deform the object.</p></li>
+<li><p>Decide on whether or not you want <strong>ngons</strong> to be attempted to be converted into quads. This doesnt always produce good results, so undo might be your friend here.</p></li>
+<li><p>Select <strong>“Cleanup”</strong></p></li>
+</ol>
+<hr></section>
 <section id="rgb-masking">
 <span id="mask"></span><h3>RGB Masking<a class="headerlink" href="#rgb-masking" title="Permalink to this headline"></a></h3>
+<p>The RGB Mask tool is an easy to use and simple way to create RGB masks from selection. Simply:</p>
+<ol class="arabic simple">
+<li><p>Toggle vertex color visibility by clicking the <strong>“Display Color”</strong> in the sidebar panel.</p></li>
+<li><p><strong>Select</strong> any object(s), vertex, or face</p></li>
+<li><p>Select the <strong>color</strong> to use on those faces</p></li>
+</ol>
 </section>
 </section>
 </section>
