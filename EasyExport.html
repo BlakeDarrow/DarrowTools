@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/logo_link.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -101,7 +102,7 @@
   <a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/releases/latest"><img alt="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport" src="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport" /></a>
 <a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/commits/main"><img alt="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" src="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" /></a>
 <hr><section id="easyexport">
-<h1>EasyExport<a class="headerlink" href="#easyexport" title="Permalink to this headline"></a></h1>
+<h1>EasyExport<a class="headerlink" href="#easyexport" title="Permalink to this heading"></a></h1>
 <p>Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard export options for both Unreal and Unity, this tools allows you to easily export your selected objects with the correct object name – by default.</p>
 <p><a class="reference internal" href="SceneOrganizer#fbxtag"><span class="std std-ref">Usage</span></a> |
 <a class="reference internal" href="#exportsettings"><span class="std std-ref">Settings</span></a> |
@@ -111,11 +112,11 @@
    <iframe src="https://www.youtube-nocookie.com/embed/TDyYM4R-OYI" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 <hr><section id="download">
-<span id="downloadexportertag"></span><h2>Download<a class="headerlink" href="#download" title="Permalink to this headline"></a></h2>
+<span id="downloadexportertag"></span><h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://github.com/BlakeDarrow/EasyExport/releases/latest">Latest Release</a> | <a class="reference external" href="https://github.com/BlakeDarrow/EasyExport/tree/main/EasyExport">Source</a></p>
 <hr></section>
 <section id="installation">
-<span id="install"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<span id="install"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Download the latest release from github.</p></li>
 <li><p>Under addon preferences in Blender, click ‘install’ and the select the recently downloaded zip file.</p></li>
@@ -127,9 +128,9 @@
 </div>
 <hr></section>
 <section id="usage">
-<span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <section id="promptless">
-<h3>Promptless<a class="headerlink" href="#promptless" title="Permalink to this headline"></a></h3>
+<h3>Promptless<a class="headerlink" href="#promptless" title="Permalink to this heading"></a></h3>
 <p>If the <em>Promptless Export</em> boolean is checked, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.
 Reference <a class="reference internal" href="#export-path"><span class="std std-ref">Export Path</span></a></p>
 <ol class="arabic simple">
@@ -143,7 +144,7 @@ Reference <a class="reference internal" href="#export-path"><span class="std std
 </div>
 <hr></section>
 <section id="prompt">
-<h3>Prompt<a class="headerlink" href="#prompt" title="Permalink to this headline"></a></h3>
+<h3>Prompt<a class="headerlink" href="#prompt" title="Permalink to this heading"></a></h3>
 <p>If the <em>Promptless Export</em> boolean is <strong>NOT</strong> checked, the <em>Export Selection</em> button will prompt the user for a file path to export every time.</p>
 <ol class="arabic simple">
 <li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
@@ -157,7 +158,7 @@ Reference <a class="reference internal" href="#export-path"><span class="std std
 </div>
 <hr></section>
 <section id="auto-naming">
-<h3>Auto Naming<a class="headerlink" href="#auto-naming" title="Permalink to this headline"></a></h3>
+<h3>Auto Naming<a class="headerlink" href="#auto-naming" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>If you are using the prompted exporter, don’t worry about filling out the name in Blenders exporter. This tool will automatically use the name of your selected mesh.</p></li>
 <li><p>If you are using the promptless method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</p></li>
@@ -173,33 +174,33 @@ Reference <a class="reference internal" href="#export-path"><span class="std std
 <hr></section>
 </section>
 <section id="settings">
-<span id="exportsettings"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline"></a></h2>
+<span id="exportsettings"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h2>
 <p><em>To show advanced options, toggle the cogwheel in the panel menu.</em></p>
 <section id="export-path">
-<h3>Export Path<a class="headerlink" href="#export-path" title="Permalink to this headline"></a></h3>
+<h3>Export Path<a class="headerlink" href="#export-path" title="Permalink to this heading"></a></h3>
 <p>Found underneath the <em>Prefix</em> and <em>Suffix</em> options, selecting the folder icon next to the string will prompt the user for a destination path. This path is shared between blender scene.</p>
 <p>Once a path is selected, “Open Export Folder” will allow you to navigate directly to the folder in Windows Explorer.</p>
 <hr></section>
 <section id="presets">
-<h3>Presets<a class="headerlink" href="#presets" title="Permalink to this headline"></a></h3>
+<h3>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h3>
 <p>Unreal and Unity “standard” export options. The exported models imported into Unity/Unreal will have correct orientations and scale. Animations “should” also work, but additional animation settings will be available soon. If you encounter problems with exporting (animation included) please reach out and let me know.</p>
 <hr></section>
 <section id="multi-object-naming">
-<h3>Multi-Object Naming<a class="headerlink" href="#multi-object-naming" title="Permalink to this headline"></a></h3>
+<h3>Multi-Object Naming<a class="headerlink" href="#multi-object-naming" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line"><strong>Found under advanced settings</strong></div>
 <div class="line">When exporting multiple objects as one mesh, the final name will be the active collections name. Make sure to set the correct collection as active when this bool is enabled.</div>
 </div>
 <hr></section>
 <section id="separate-all-actions">
-<h3>Separate All Actions<a class="headerlink" href="#separate-all-actions" title="Permalink to this headline"></a></h3>
+<h3>Separate All Actions<a class="headerlink" href="#separate-all-actions" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line"><strong>Found under advanced settings</strong></div>
 <div class="line">Blender’s export setting for exporting all animations separately.</div>
 </div>
 <hr></section>
 <section id="use-leaf-bones">
-<h3>Use Leaf Bones<a class="headerlink" href="#use-leaf-bones" title="Permalink to this headline"></a></h3>
+<h3>Use Leaf Bones<a class="headerlink" href="#use-leaf-bones" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line"><strong>Found under advanced settings</strong></div>
 <div class="line">Add a leaf bone to the end of the chain on export.</div>
