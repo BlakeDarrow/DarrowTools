@@ -57,9 +57,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#promptless">Promptless</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#prompt">Prompt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#use-object-origin">Use Object Origin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#batch-export">Batch Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#singular-export">Singular Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-s-export-location">Object’s Export Location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#active-origin">Active Origin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#individual-origins">Individual Origins</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#auto-naming">Auto Naming</a></li>
 </ul>
 </li>
@@ -67,6 +71,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#export-path">Export Path</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#presets">Presets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#smart-naming">Smart Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#direct-export">Direct Export</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#force-single-user">Force Single User</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#separate-all-actions">Separate All Actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#use-leaf-bones">Use Leaf Bones</a></li>
@@ -106,7 +111,11 @@
 <a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/commits/main"><img alt="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" src="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" /></a>
 <hr><section id="easyexport">
 <h1>EasyExport<a class="headerlink" href="#easyexport" title="Permalink to this heading"></a></h1>
-<p>Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard export options for both Unreal and Unity, this tools allows you to easily export your selected objects with the correct object name – by default.</p>
+<div class="line-block">
+<div class="line">Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard export options for both Unreal and Unity, this tools allows you to easily export your selected objects with the correct object name – by default.</div>
+<div class="line"><br /></div>
+<div class="line">Check out the recently added <strong>“Batch Export”</strong> options!</div>
+</div>
 <p><a class="reference internal" href="SceneOrganizer#fbxtag"><span class="std std-ref">Usage</span></a> |
 <a class="reference internal" href="#exportsettings"><span class="std std-ref">Settings</span></a> |
 <a class="reference internal" href="#downloadexportertag"><span class="std std-ref">Download</span></a> |
@@ -139,46 +148,38 @@
 <hr></section>
 <section id="usage">
 <span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
-<section id="promptless">
-<h3>Promptless<a class="headerlink" href="#promptless" title="Permalink to this heading"></a></h3>
-<p>If the <em>Promptless Export</em> button is selected, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.
-Reference <a class="reference internal" href="#export-path"><span class="std std-ref">Export Path</span></a></p>
-<ol class="arabic simple">
-<li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
-<li><p><strong>Input desired export path</strong> in required path field (only first time)</p></li>
-<li><p><strong>Hit Export Selection</strong></p></li>
-</ol>
+<section id="batch-export">
+<h3>Batch Export<a class="headerlink" href="#batch-export" title="Permalink to this heading"></a></h3>
+<p>If the <em>Batch Export</em> button is selected, upon exporting, every object selected will be exported separately. This tool utilizes all the settings found in the <em>Easy Export</em> panel, thus giving the user many workflow options.</p>
+<hr></section>
+<section id="singular-export">
+<h3>Singular Export<a class="headerlink" href="#singular-export" title="Permalink to this heading"></a></h3>
+<p>If the <em>Batch Export</em> boolean is <strong>NOT</strong> checked, when exported, all selected mesh’s will be outputted as a single, combined object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Under the hood, the button in the UI is actual changing, so if you add the <em>Export Selection</em> button to your quick favorites, it will be linked to whatever state the promptless bool is in.</p>
+<p>When exporting multiple objects as one combined output, <em>and</em> <em>Use Active Origin</em> is selected, the active object’s origin will be used as the export location.</p>
 </div>
 <hr></section>
-<section id="prompt">
-<h3>Prompt<a class="headerlink" href="#prompt" title="Permalink to this heading"></a></h3>
-<p>If the <em>Promptless Export</em> boolean is <strong>NOT</strong> checked, the <em>Export Selection</em> button will prompt the user for a file path to export every time.</p>
-<ol class="arabic simple">
-<li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
-<li><p><strong>Hit Export Selection</strong></p></li>
-<li><p>Navigate to folder destination</p></li>
-<li><p><strong>Select Export Selection</strong> in the pop-up</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Please do not attempt to change the export name in the file browser. Whatever name you type in will be added to the output name on export, leaving you with an incorrect .fbx file name.</p>
-</div>
-<hr></section>
-<section id="use-object-origin">
-<h3>Use Object Origin<a class="headerlink" href="#use-object-origin" title="Permalink to this heading"></a></h3>
+<section id="object-s-export-location">
+<h3>Object’s Export Location<a class="headerlink" href="#object-s-export-location" title="Permalink to this heading"></a></h3>
+<section id="active-origin">
+<h4>Active Origin<a class="headerlink" href="#active-origin" title="Permalink to this heading"></a></h4>
 <div class="line-block">
-<div class="line">When this button is selected, at export, the object’s origin will be used instead of the world origin. This is useful especially when there are multiple objects in the scene.</div>
-<div class="line">When exporting multiple objects with this button applied, the active objects origin will be used.</div>
+<div class="line">If you have a button that reads “Use Active Origin”, you are exporting as one object. If selected, at export, the <em>active object’s</em> (generally the last object selected) <em>origin</em> will be used instead of the world origin.</div>
+</div>
+</section>
+<section id="individual-origins">
+<h4>Individual Origins<a class="headerlink" href="#individual-origins" title="Permalink to this heading"></a></h4>
+<div class="line-block">
+<div class="line">If that buttons label is “Use Individual Origins”, you are batch exporting. If selected, you will export with each objects origin being used as the export location, instead of the world origin.</div>
 </div>
 <hr></section>
+</section>
 <section id="auto-naming">
 <h3>Auto Naming<a class="headerlink" href="#auto-naming" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>If you are using the prompted exporter, don’t worry about filling out the name in Blenders exporter. This tool will automatically use the name of your selected mesh.</p></li>
-<li><p>If you are using the promptless method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</p></li>
+<li><p>If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><strong>Prefix and suffix naming.</strong></div>
@@ -193,7 +194,7 @@ Reference <a class="reference internal" href="#export-path"><span class="std std
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Currently, selecting multiple objects will export them as one mesh, using the name of the <em>active</em> collection. This is not necessarily the parent collection of the objects. Make sure to select your parent collection when using this method.</p>
+<p>When exporting combined, and <em>“Smart Naming” is on, the outputted file name will use the name of the *active</em> collection. This is not necessarily the parent collection of the objects. Make sure to select your parent collection when using this method.</p>
 </div>
 <hr></section>
 </section>
@@ -219,6 +220,24 @@ Reference <a class="reference internal" href="#export-path"><span class="std std
 <div class="line"><strong>Found under advanced settings</strong></div>
 <div class="line">When exporting multiple objects as one mesh, the final name will be the active collections name plus any prefix and suffix customizations. Make sure to set the correct collection as active when this bool is enabled.</div>
 <div class="line">When exporting a singular object, the final name will be the selected objects name plus any prefix and suffix customizations.</div>
+</div>
+<hr></section>
+<section id="direct-export">
+<h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><strong>Found under advanced settings</strong></div>
+<div class="line">If the <em>Direct Export</em> button is selected, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.</div>
+<div class="line">Reference <a class="reference internal" href="#export-path"><span class="std std-ref">Export Path</span></a></div>
+<div class="line">If the <em>Direct Export</em> button is de-selected, the <em>Export Selection</em> button will prompt the user for a destination to export.</div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
+<li><p><strong>Input desired export path</strong> in required path field (only first time)</p></li>
+<li><p><strong>Hit Export Selection</strong></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Under the hood, the button in the UI is actual changing, so if you add the <em>Export Selection</em> button to your quick favorites, it will be linked to whatever state the promptless bool is in.</p>
 </div>
 <hr></section>
 <section id="force-single-user">
