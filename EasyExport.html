@@ -64,13 +64,17 @@
 <li class="toctree-l4"><a class="reference internal" href="#individual-origins">Individual Origins</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#auto-naming">Auto Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming">Naming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#singular-exporting">Singular Exporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#batch-exporting">Batch Exporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prefix-and-suffix">Prefix and Suffix</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#export-path">Export Path</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#presets">Presets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#smart-naming">Smart Naming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#direct-export">Direct Export</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#force-single-user">Force Single User</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#separate-all-actions">Separate All Actions</a></li>
@@ -116,7 +120,7 @@
 <div class="line"><br /></div>
 <div class="line">Check out the recently added <strong>“Batch Export”</strong> options!</div>
 </div>
-<p><a class="reference internal" href="SceneOrganizer#fbxtag"><span class="std std-ref">Usage</span></a> |
+<p><a class="reference internal" href="#usagetag"><span class="std std-ref">Usage</span></a> |
 <a class="reference internal" href="#exportsettings"><span class="std std-ref">Settings</span></a> |
 <a class="reference internal" href="#downloadexportertag"><span class="std std-ref">Download</span></a> |
 <a class="reference internal" href="#install"><span class="std std-ref">Installation</span></a> |
@@ -141,16 +145,16 @@
 <li><p>Under addon preferences in Blender, click ‘install’ and the select the recently downloaded zip file.</p></li>
 <li><p>Enable the addon</p></li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
 <p>Sometimes you might get an error when installing saying there isn’t a module named “EasyExport”, restart Blender and try enabling the addon again.</p>
 </div>
 <hr></section>
 <section id="usage">
-<span id="fbxtag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<span id="usagetag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <section id="batch-export">
 <h3>Batch Export<a class="headerlink" href="#batch-export" title="Permalink to this heading"></a></h3>
-<p>If the <em>Batch Export</em> button is selected, upon exporting, every object selected will be exported separately. This tool utilizes all the settings found in the <em>Easy Export</em> panel, thus giving the user many workflow options.</p>
+<p>If selected, upon exporting, every object selected will be exported separately. This tool also utilizes all the settings found in the <em>Easy Export</em> panel.</p>
 <hr></section>
 <section id="singular-export">
 <h3>Singular Export<a class="headerlink" href="#singular-export" title="Permalink to this heading"></a></h3>
@@ -162,41 +166,55 @@
 <hr></section>
 <section id="object-s-export-location">
 <h3>Object’s Export Location<a class="headerlink" href="#object-s-export-location" title="Permalink to this heading"></a></h3>
+<p>Depending on your exporting mode you will get two separate options.</p>
 <section id="active-origin">
 <h4>Active Origin<a class="headerlink" href="#active-origin" title="Permalink to this heading"></a></h4>
 <div class="line-block">
-<div class="line">If you have a button that reads “Use Active Origin”, you are exporting as one object. If selected, at export, the <em>active object’s</em> (generally the last object selected) <em>origin</em> will be used instead of the world origin.</div>
+<div class="line">If “Use Active Origin” is selected, you are exporting as a singular object. If checked, at export, the <em>active object’s origin</em> will be used instead of the world origin.</div>
 </div>
 </section>
 <section id="individual-origins">
 <h4>Individual Origins<a class="headerlink" href="#individual-origins" title="Permalink to this heading"></a></h4>
 <div class="line-block">
-<div class="line">If that buttons label is “Use Individual Origins”, you are batch exporting. If selected, you will export with each objects origin being used as the export location, instead of the world origin.</div>
+<div class="line">If “Use Individual Origins”, you are batch exporting. If selected, you will export with each objects origin being used as the export location, instead of the world origin.</div>
 </div>
+<p>If left unselected, the output will be at world origin (0,0,0).</p>
 <hr></section>
 </section>
-<section id="auto-naming">
-<h3>Auto Naming<a class="headerlink" href="#auto-naming" title="Permalink to this heading"></a></h3>
+<section id="naming">
+<h3>Naming<a class="headerlink" href="#naming" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>If you are using the prompted exporter, don’t worry about filling out the name in Blenders exporter. This tool will automatically use the name of your selected mesh.</p></li>
 <li><p>If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</p></li>
 </ul>
+<section id="singular-exporting">
+<h4>Singular Exporting<a class="headerlink" href="#singular-exporting" title="Permalink to this heading"></a></h4>
+<p>Depending on exporting mode you might not be able to select functionality. Batch Export locks the base naming to each objects corresponding Blender name.</p>
 <div class="line-block">
-<div class="line"><strong>Prefix and suffix naming.</strong></div>
-<div class="line">Looking for different naming conventions? Try using the “Prefix” and “Suffix” options. These custom options include settings like mesh export counting and custom prefix words, like “assets”.</div>
+<div class="line"><strong>“Smart Output Name”</strong></div>
+<div class="line">If more than one object is selected, the active collection’s name will be used as the export name. If only one object is selected, the output name will be the selected objects.</div>
 </div>
 <div class="line-block">
-<div class="line">When exporting with a suffix, you can either add a “high” or “low” tag, but not both. Additionally, if “high” or “low” is selected, you cannot choose a custom suffix. These are “either or” operations. Not both.</div>
+<div class="line"><strong>“Prompt Output Name”</strong></div>
+<div class="line">The user will be prompted for the export name.</div>
+</div>
+<p>If none are selected, the object’s selected name will be used as the output base name.</p>
+</section>
+<section id="batch-exporting">
+<h4>Batch Exporting<a class="headerlink" href="#batch-exporting" title="Permalink to this heading"></a></h4>
+<p>When batch exporting, each output will be named its corresponding object name in Blender.</p>
+<hr></section>
+<section id="prefix-and-suffix">
+<h4>Prefix and Suffix<a class="headerlink" href="#prefix-and-suffix" title="Permalink to this heading"></a></h4>
+<div class="line-block">
+<div class="line">When exporting with a suffix, you can either add a “high, “low”, or custom tag, but only one. Additionally, if “high” or “low” is selected, you cannot choose a custom suffix. These are “either or” operations. Not both.</div>
 <div class="line"><br /></div>
 <div class="line">When utilizing the iterative suffix option, there will be an increased numerical value added to the end of the exported object name.</div>
 <div class="line"><br /></div>
 <div class="line">If the “.blend” prefix is selected, the user will be prompted to save if the scene has not been saved already.</div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>When exporting combined, and <em>“Smart Naming” is on, the outputted file name will use the name of the *active</em> collection. This is not necessarily the parent collection of the objects. Make sure to select your parent collection when using this method.</p>
-</div>
 <hr></section>
+</section>
 </section>
 <section id="settings">
 <span id="exportsettings"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h2>
@@ -213,14 +231,6 @@
 <section id="presets">
 <h3>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h3>
 <p>Unreal and Unity “standard” export options. The exported models imported into Unity/Unreal will have correct orientations and scale. Animations “should” also work, but additional animation settings will be available soon. If you encounter problems with exporting (animation included) please reach out and let me know.</p>
-<hr></section>
-<section id="smart-naming">
-<h3>Smart Naming<a class="headerlink" href="#smart-naming" title="Permalink to this heading"></a></h3>
-<div class="line-block">
-<div class="line"><strong>Found under advanced settings</strong></div>
-<div class="line">When exporting multiple objects as one mesh, the final name will be the active collections name plus any prefix and suffix customizations. Make sure to set the correct collection as active when this bool is enabled.</div>
-<div class="line">When exporting a singular object, the final name will be the selected objects name plus any prefix and suffix customizations.</div>
-</div>
 <hr></section>
 <section id="direct-export">
 <h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
