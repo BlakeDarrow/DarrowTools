@@ -56,11 +56,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">EasyExport</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mode">Mode</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#batch">Batch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#singular">Singular</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#mode">Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#object-location">Object Location</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#path">Path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a></li>
@@ -150,17 +146,16 @@
 <hr></section>
 <section id="mode">
 <span id="moderef"></span><h2>Mode<a class="headerlink" href="#mode" title="Permalink to this heading"></a></h2>
-<section id="batch">
-<h3>Batch<a class="headerlink" href="#batch" title="Permalink to this heading"></a></h3>
-<p>If <em>“Batch Export”</em> is selected, upon exporting, every object selected will be exported separately and output with their corresponding mesh name.
-Reference <a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a>.</p>
-</section>
-<section id="singular">
-<h3>Singular<a class="headerlink" href="#singular" title="Permalink to this heading"></a></h3>
-<p>If the <em>“Batch Export”</em> boolean is <strong>NOT</strong> checked, when exported, all selected mesh’s will be output as a single combined object. That singular output file will be named whichever preference the user selects.
-Reference <a class="reference internal" href="#namingsettings"><span class="std std-ref">Naming</span></a> and <a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a>.</p>
+<div class="line-block">
+<div class="line">1. <strong>Batch Exporting</strong></div>
+<div class="line">If <em>“Batch Export”</em> is selected, upon exporting, every object selected will be exported separately and output with their corresponding mesh name.</div>
+<div class="line">Reference <a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a>.</div>
+<div class="line"><br /></div>
+<div class="line">2. <strong>Combined Export</strong></div>
+<div class="line">If the <em>“Batch Export”</em> boolean is <strong>NOT</strong> checked, when exported, all selected mesh’s will be output as a single combined object. That singular output file will be named whichever preference the user selects.</div>
+<div class="line">Reference <a class="reference internal" href="#namingsettings"><span class="std std-ref">Naming</span></a> and <a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a>.</div>
+</div>
 <hr></section>
-</section>
 <section id="object-location">
 <h2>Object Location<a class="headerlink" href="#object-location" title="Permalink to this heading"></a></h2>
 <p>Depending on your exporting mode you will get two separate options.</p>
@@ -195,9 +190,15 @@ Reference <a class="reference internal" href="#namingsettings"><span class="std 
 <span id="namingsettings"></span><h2>Naming<a class="headerlink" href="#naming" title="Permalink to this heading"></a></h2>
 <section id="base-name">
 <h3>Base Name<a class="headerlink" href="#base-name" title="Permalink to this heading"></a></h3>
+<div class="line-block">
+<div class="line">When batch exporting, each objects base name will be its corresponding mesh name. Reference <a class="reference internal" href="#moderef"><span class="std std-ref">Mode</span></a>.</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Depending on exporting mode you might not be able to select functionality. Batch Export locks the base naming to each objects corresponding Blender name.</p>
+</div>
+<div class="line-block">
+<div class="line">These three options only apply to the singular export mode.</div>
 </div>
 <div class="line-block">
 <div class="line">1. <strong>Active Collection</strong></div>
@@ -210,12 +211,8 @@ Reference <a class="reference internal" href="#namingsettings"><span class="std 
 <div class="line-block">
 <div class="line">3. <strong>Prompt Output Name</strong></div>
 <div class="line">The user will be prompted for the base export name.</div>
-</div>
-<p>When batch exporting, each output will be named its corresponding mesh name. Reference <a class="reference internal" href="#moderef"><span class="std std-ref">Mode</span></a>.</p>
-<div class="line-block">
-<div class="line">If you are using the prompted exporter, don’t fill out the name in Blender’s exporter. This tool will automatically use the name of your selected mesh.</div>
 <div class="line"><br /></div>
-<div class="line">If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.  Reference <a class="reference internal" href="#direct"><span class="std std-ref">Direct Export</span></a>.</div>
+<div class="line">If you are not using the <em>“Direct Export”</em> method, don’t fill out the name in Blender’s exporter.</div>
 </div>
 </section>
 <section id="prefix-and-suffix">
@@ -231,7 +228,7 @@ Reference <a class="reference internal" href="#namingsettings"><span class="std 
 </section>
 <section id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h2>
-<p><em>To show advanced options, toggle the cogwheel in the panel menu.</em></p>
+<p><em>To show advanced options, toggle the cogwheel in the panel header.</em></p>
 <section id="direct-export">
 <span id="direct"></span><h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
 <div class="line-block">
