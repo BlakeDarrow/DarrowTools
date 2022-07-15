@@ -56,29 +56,30 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">EasyExport</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#batch-export">Batch Export</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#singular-export">Singular Export</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#object-s-export-location">Object’s Export Location</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#active-origin">Active Origin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#individual-origins">Individual Origins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode">Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#batch">Batch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#singular">Singular</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#naming">Naming</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#singular-exporting">Singular Exporting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#batch-exporting">Batch Exporting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#prefix-and-suffix">Prefix and Suffix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#object-location">Object Location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#active-origin">Active Origin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#individual-origins">Individual Origins</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#path">Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#naming">Naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-name">Base Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prefix-and-suffix">Prefix and Suffix</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#export-path">Export Path</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#presets">Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#direct-export">Direct Export</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#force-single-user">Force Single User</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#separate-all-actions">Separate All Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#use-leaf-bones">Use Leaf Bones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-folder-on-export">Open Folder On Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-docs">Open Docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-presets">Open Presets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-defaults">Edit Defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#help">Help</a></li>
@@ -116,20 +117,21 @@
 <hr><section id="easyexport">
 <h1>EasyExport<a class="headerlink" href="#easyexport" title="Permalink to this heading"></a></h1>
 <div class="line-block">
-<div class="line">Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard export options for both Unreal and Unity, this tools allows you to easily export your selected objects with the correct object name – by default.</div>
+<div class="line">Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard blender export presets, this tools allows you to easily export your selected objects.</div>
 <div class="line"><br /></div>
 <div class="line">Check out the recently added <strong>“Batch Export”</strong> options!</div>
 </div>
-<p><a class="reference internal" href="#usagetag"><span class="std std-ref">Usage</span></a> |
-<a class="reference internal" href="#exportsettings"><span class="std std-ref">Settings</span></a> |
-<a class="reference internal" href="#downloadexportertag"><span class="std std-ref">Download</span></a> |
+<p><a class="reference internal" href="#downloadexportertag"><span class="std std-ref">Download</span></a> |
 <a class="reference internal" href="#install"><span class="std std-ref">Installation</span></a> |
+<a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a> |
+<a class="reference internal" href="#presetssettings"><span class="std std-ref">Presets</span></a> |
+<a class="reference internal" href="#namingsettings"><span class="std std-ref">Naming</span></a> |
 <a class="reference internal" href="#helptag"><span class="std std-ref">Help</span></a></p>
 <!-- https://github.com/paulirish/lite-youtube-embed -->
 <div>
 <link rel="stylesheet" href="./_static/css/lite-yt-embed.css" />
 <script src="./_static/lite-yt-embed.js"></script>
-<lite-youtube videoid="TDyYM4R-OYI" style="background-image: url('https://img.youtube.com/vi/TDyYM4R-OYI/maxresdefault.jpg');">
+<lite-youtube videoid="zLwUxIT3xiw" style="background-image: url('https://img.youtube.com/vi/zLwUxIT3xiw/maxresdefault.jpg');">
 <button type="button" class="lty-playbtn">
    <span class="lyt-visually-hidden">EasyExport</span>
 </button>
@@ -150,62 +152,78 @@
 <p>Sometimes you might get an error when installing saying there isn’t a module named “EasyExport”, restart Blender and try enabling the addon again.</p>
 </div>
 <hr></section>
-<section id="usage">
-<span id="usagetag"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
-<section id="batch-export">
-<h3>Batch Export<a class="headerlink" href="#batch-export" title="Permalink to this heading"></a></h3>
-<p>If selected, upon exporting, every object selected will be exported separately. This tool also utilizes all the settings found in the <em>Easy Export</em> panel.</p>
+<section id="mode">
+<h2>Mode<a class="headerlink" href="#mode" title="Permalink to this heading"></a></h2>
+<section id="batch">
+<h3>Batch<a class="headerlink" href="#batch" title="Permalink to this heading"></a></h3>
+<p>If <em>Batch Export</em> is selected, upon exporting, every object selected will be exported separately. This tool also utilizes all the settings found in the <em>Easy Export</em> panel.</p>
 <hr></section>
-<section id="singular-export">
-<h3>Singular Export<a class="headerlink" href="#singular-export" title="Permalink to this heading"></a></h3>
+<section id="singular">
+<h3>Singular<a class="headerlink" href="#singular" title="Permalink to this heading"></a></h3>
 <p>If the <em>Batch Export</em> boolean is <strong>NOT</strong> checked, when exported, all selected mesh’s will be outputted as a single, combined object.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When exporting multiple objects as one combined output, <em>and</em> <em>Use Active Origin</em> is selected, the active object’s origin will be used as the export location.</p>
-</div>
 <hr></section>
-<section id="object-s-export-location">
-<h3>Object’s Export Location<a class="headerlink" href="#object-s-export-location" title="Permalink to this heading"></a></h3>
+</section>
+<section id="object-location">
+<h2>Object Location<a class="headerlink" href="#object-location" title="Permalink to this heading"></a></h2>
 <p>Depending on your exporting mode you will get two separate options.</p>
 <section id="active-origin">
-<h4>Active Origin<a class="headerlink" href="#active-origin" title="Permalink to this heading"></a></h4>
+<h3>Active Origin<a class="headerlink" href="#active-origin" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">If “Use Active Origin” is selected, you are exporting as a singular object. If checked, at export, the <em>active object’s origin</em> will be used instead of the world origin.</div>
 </div>
 </section>
 <section id="individual-origins">
-<h4>Individual Origins<a class="headerlink" href="#individual-origins" title="Permalink to this heading"></a></h4>
+<h3>Individual Origins<a class="headerlink" href="#individual-origins" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">If “Use Individual Origins”, you are batch exporting. If selected, you will export with each objects origin being used as the export location, instead of the world origin.</div>
 </div>
 <p>If left unselected, the output will be at world origin (0,0,0).</p>
 <hr></section>
 </section>
-<section id="naming">
-<h3>Naming<a class="headerlink" href="#naming" title="Permalink to this heading"></a></h3>
-<ul class="simple">
-<li><p>If you are using the prompted exporter, don’t worry about filling out the name in Blenders exporter. This tool will automatically use the name of your selected mesh.</p></li>
-<li><p>If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</p></li>
-</ul>
-<section id="singular-exporting">
-<h4>Singular Exporting<a class="headerlink" href="#singular-exporting" title="Permalink to this heading"></a></h4>
-<p>Depending on exporting mode you might not be able to select functionality. Batch Export locks the base naming to each objects corresponding Blender name.</p>
+<section id="path">
+<span id="pathsettings"></span><h2>Path<a class="headerlink" href="#path" title="Permalink to this heading"></a></h2>
 <div class="line-block">
-<div class="line"><strong>“Smart Output Name”</strong></div>
-<div class="line">If more than one object is selected, the active collection’s name will be used as the export name. If only one object is selected, the output name will be the selected objects.</div>
+<div class="line">Selecting the folder icon next to the string will prompt the user for a destination path. If <strong>Direct Export</strong> is enabled, when exporting, the object(s) will be directly exported to this path.</div>
+<div class="line">(This path is absolute, not relative)</div>
 </div>
-<div class="line-block">
-<div class="line"><strong>“Prompt Output Name”</strong></div>
-<div class="line">The user will be prompted for the export name.</div>
-</div>
-<p>If none are selected, the object’s selected name will be used as the output base name.</p>
-</section>
-<section id="batch-exporting">
-<h4>Batch Exporting<a class="headerlink" href="#batch-exporting" title="Permalink to this heading"></a></h4>
-<p>When batch exporting, each output will be named its corresponding object name in Blender.</p>
+<p>Once a path is selected, “Open Export Folder” will allow you to navigate directly to the folder in Windows Explorer.</p>
 <hr></section>
+<section id="presets">
+<span id="presetssettings"></span><h2>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line">These are the users Export Operator presets, built in Blender’s the export pop-up. This allows the user to use a vast amount of different workflows with my tool.</div>
+<div class="line">The “default” preset is built by me with an emphasis for Unreal Engine.</div>
+</div>
+<hr></section>
+<section id="naming">
+<span id="namingsettings"></span><h2>Naming<a class="headerlink" href="#naming" title="Permalink to this heading"></a></h2>
+<section id="base-name">
+<h3>Base Name<a class="headerlink" href="#base-name" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on exporting mode you might not be able to select functionality. Batch Export locks the base naming to each objects corresponding Blender name.</p>
+</div>
+<div class="line-block">
+<div class="line"><strong>Active Collection</strong></div>
+<div class="line">The active collection’s name will be used as the export name.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Active Object</strong></div>
+<div class="line">If selected, the active object will be used as the output base name.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Prompt Output Name</strong></div>
+<div class="line">The user will be prompted for the base export name.</div>
+</div>
+<p>When batch exporting, each output will be named its corresponding mesh name.</p>
+<div class="line-block">
+<div class="line">If you are using the prompted exporter, don’t fill out the name in Blender’s exporter. This tool will automatically use the name of your selected mesh.</div>
+<div class="line"><br /></div>
+<div class="line">If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</div>
+</div>
+</section>
 <section id="prefix-and-suffix">
-<h4>Prefix and Suffix<a class="headerlink" href="#prefix-and-suffix" title="Permalink to this heading"></a></h4>
+<h3>Prefix and Suffix<a class="headerlink" href="#prefix-and-suffix" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">When exporting with a suffix, you can either add a “high, “low”, or custom tag, but only one. Additionally, if “high” or “low” is selected, you cannot choose a custom suffix. These are “either or” operations. Not both.</div>
 <div class="line"><br /></div>
@@ -215,78 +233,58 @@
 </div>
 <hr></section>
 </section>
-</section>
-<section id="settings">
-<span id="exportsettings"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h2>
+<section id="advanced">
+<h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h2>
 <p><em>To show advanced options, toggle the cogwheel in the panel menu.</em></p>
-<section id="export-path">
-<h3>Export Path<a class="headerlink" href="#export-path" title="Permalink to this heading"></a></h3>
-<div class="line-block">
-<div class="line">Found directly underneath the <em>Prefix</em> and <em>Suffix</em> panel options. Selecting the folder icon next to the string will prompt the user for a destination path. This path is shared between blender scene.</div>
-<div class="line"><br /></div>
-<div class="line">This path is absolute, not relative.</div>
-</div>
-<p>Once a path is selected, “Open Export Folder” will allow you to navigate directly to the folder in Windows Explorer.</p>
-<hr></section>
-<section id="presets">
-<h3>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h3>
-<p>Unreal and Unity “standard” export options. The exported models imported into Unity/Unreal will have correct orientations and scale. Animations “should” also work, but additional animation settings will be available soon. If you encounter problems with exporting (animation included) please reach out and let me know.</p>
-<hr></section>
 <section id="direct-export">
 <h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
 <div class="line-block">
-<div class="line"><strong>Found under advanced settings</strong></div>
-<div class="line">If the <em>Direct Export</em> button is selected, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.</div>
-<div class="line">Reference <a class="reference internal" href="#export-path"><span class="std std-ref">Export Path</span></a></div>
-<div class="line">If the <em>Direct Export</em> button is de-selected, the <em>Export Selection</em> button will prompt the user for a destination to export.</div>
-</div>
-<ol class="arabic simple">
-<li><p><strong>Select mesh(s)</strong> (will be combined on export)</p></li>
-<li><p><strong>Input desired export path</strong> in required path field (only first time)</p></li>
-<li><p><strong>Hit Export Selection</strong></p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Under the hood, the button in the UI is actual changing, so if you add the <em>Export Selection</em> button to your quick favorites, it will be linked to whatever state the promptless bool is in.</p>
+<div class="line">If selected, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.</div>
+<div class="line"><br /></div>
+<div class="line">If <strong>not</strong> selected, the <em>Export Selection</em> button will prompt the user for a destination to export everytime.</div>
 </div>
 <hr></section>
 <section id="force-single-user">
 <h3>Force Single User<a class="headerlink" href="#force-single-user" title="Permalink to this heading"></a></h3>
 <div class="line-block">
-<div class="line"><strong>Found under advanced settings</strong></div>
 <div class="line">When exporting, if any objects are linked, they will become single users.</div>
 </div>
 <hr></section>
-<section id="separate-all-actions">
-<h3>Separate All Actions<a class="headerlink" href="#separate-all-actions" title="Permalink to this heading"></a></h3>
+<section id="open-folder-on-export">
+<h3>Open Folder On Export<a class="headerlink" href="#open-folder-on-export" title="Permalink to this heading"></a></h3>
 <div class="line-block">
-<div class="line"><strong>Found under advanced settings</strong></div>
-<div class="line">Blender’s export setting for exporting all animations separately.</div>
+<div class="line">After exported, the destination folder will be opened.</div>
 </div>
 <hr></section>
-<section id="use-leaf-bones">
-<h3>Use Leaf Bones<a class="headerlink" href="#use-leaf-bones" title="Permalink to this heading"></a></h3>
+<section id="open-docs">
+<h3>Open Docs<a class="headerlink" href="#open-docs" title="Permalink to this heading"></a></h3>
 <div class="line-block">
-<div class="line"><strong>Found under advanced settings</strong></div>
-<div class="line">Blender’s export option to utilize leaf bones when exporting.</div>
+<div class="line">Opens <strong>darrow.tools/EasyExport</strong> in the default web browser.</div>
+</div>
+<hr></section>
+<section id="open-presets">
+<h3>Open Presets<a class="headerlink" href="#open-presets" title="Permalink to this heading"></a></h3>
+<div class="line-block">
+<div class="line">This opens the path to Blender’s user preset files. These python files are editable, and offers a different method to edit export presets.</div>
+</div>
+<hr></section>
+<section id="edit-defaults">
+<h3>Edit Defaults<a class="headerlink" href="#edit-defaults" title="Permalink to this heading"></a></h3>
+<div class="line-block">
+<div class="line">This opens my custom default preset in your default text-editor.</div>
 </div>
 <hr></section>
 </section>
 <section id="help">
 <span id="helptag"></span><h2>Help<a class="headerlink" href="#help" title="Permalink to this heading"></a></h2>
-<div class="line-block">
-<div class="line"><strong>No module named “EasyExport” installed</strong></div>
-</div>
 <ol class="arabic simple">
 <li><p>Restart Blender</p></li>
 <li><p>Enable “EasyExport” in preferences -&gt; addons</p></li>
 </ol>
 <div class="line-block">
 <div class="line"><strong>Have any questions or comments?</strong></div>
+<div class="line">Email me at <a class="reference external" href="mailto:support&#37;&#52;&#48;darrow&#46;tools">support<span>&#64;</span>darrow<span>&#46;</span>tools</a></div>
 </div>
-<ol class="arabic simple">
-<li><p>Email me at <a class="reference external" href="mailto:support&#37;&#52;&#48;darrow&#46;tools">support<span>&#64;</span>darrow<span>&#46;</span>tools</a></p></li>
-</ol>
 </section>
 </section>
 
