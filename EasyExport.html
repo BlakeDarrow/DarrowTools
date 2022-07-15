@@ -61,11 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#singular">Singular</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#object-location">Object Location</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#active-origin">Active Origin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#individual-origins">Individual Origins</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#object-location">Object Location</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#path">Path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#naming">Naming</a><ul>
@@ -153,46 +149,46 @@
 </div>
 <hr></section>
 <section id="mode">
-<h2>Mode<a class="headerlink" href="#mode" title="Permalink to this heading"></a></h2>
+<span id="moderef"></span><h2>Mode<a class="headerlink" href="#mode" title="Permalink to this heading"></a></h2>
 <section id="batch">
 <h3>Batch<a class="headerlink" href="#batch" title="Permalink to this heading"></a></h3>
-<p>If <em>Batch Export</em> is selected, upon exporting, every object selected will be exported separately. This tool also utilizes all the settings found in the <em>Easy Export</em> panel.</p>
-<hr></section>
+<p>If <em>“Batch Export”</em> is selected, upon exporting, every object selected will be exported separately and output with their corresponding mesh name.
+Reference <a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a>.</p>
+</section>
 <section id="singular">
 <h3>Singular<a class="headerlink" href="#singular" title="Permalink to this heading"></a></h3>
-<p>If the <em>Batch Export</em> boolean is <strong>NOT</strong> checked, when exported, all selected mesh’s will be outputted as a single, combined object.</p>
+<p>If the <em>“Batch Export”</em> boolean is <strong>NOT</strong> checked, when exported, all selected mesh’s will be output as a single combined object. That singular output file will be named whichever preference the user selects.
+Reference <a class="reference internal" href="#namingsettings"><span class="std std-ref">Naming</span></a> and <a class="reference internal" href="#pathsettings"><span class="std std-ref">Path</span></a>.</p>
 <hr></section>
 </section>
 <section id="object-location">
 <h2>Object Location<a class="headerlink" href="#object-location" title="Permalink to this heading"></a></h2>
 <p>Depending on your exporting mode you will get two separate options.</p>
-<section id="active-origin">
-<h3>Active Origin<a class="headerlink" href="#active-origin" title="Permalink to this heading"></a></h3>
 <div class="line-block">
-<div class="line">If “Use Active Origin” is selected, you are exporting as a singular object. If checked, at export, the <em>active object’s origin</em> will be used instead of the world origin.</div>
-</div>
-</section>
-<section id="individual-origins">
-<h3>Individual Origins<a class="headerlink" href="#individual-origins" title="Permalink to this heading"></a></h3>
-<div class="line-block">
-<div class="line">If “Use Individual Origins”, you are batch exporting. If selected, you will export with each objects origin being used as the export location, instead of the world origin.</div>
+<div class="line">1. <strong>Active Origin</strong></div>
+<div class="line">If you see <em>“Use Active Origin”</em>, you are exporting as a singular object. If selected, at export, the <em>active object’s origin</em> will be used instead of the world origin.</div>
+<div class="line"><br /></div>
+<div class="line">2. <strong>Individual Origins</strong></div>
+<div class="line">If you see <em>“Use Individual Origins”</em>, you are batch exporting. If selected, you will export with each objects origin being used as the export location, instead of the world origin.</div>
 </div>
 <p>If left unselected, the output will be at world origin (0,0,0).</p>
 <hr></section>
-</section>
 <section id="path">
 <span id="pathsettings"></span><h2>Path<a class="headerlink" href="#path" title="Permalink to this heading"></a></h2>
 <div class="line-block">
-<div class="line">Selecting the folder icon next to the string will prompt the user for a destination path. If <strong>Direct Export</strong> is enabled, when exporting, the object(s) will be directly exported to this path.</div>
+<div class="line">Selecting the folder icon next to the string will prompt the user for a destination path. If <em>“Direct Export”</em> is enabled, when exporting, the object(s) will be directly exported to this path.</div>
 <div class="line">(This path is absolute, not relative)</div>
 </div>
-<p>Once a path is selected, “Open Export Folder” will allow you to navigate directly to the folder in Windows Explorer.</p>
+<p>Once a path is selected, <em>“Open Export Folder”</em> will allow you to navigate directly to the folder in Windows Explorer.</p>
 <hr></section>
 <section id="presets">
 <span id="presetssettings"></span><h2>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h2>
 <div class="line-block">
-<div class="line">These are the users Export Operator presets, built in Blender’s the export pop-up. This allows the user to use a vast amount of different workflows with my tool.</div>
-<div class="line">The “default” preset is built by me with an emphasis for Unreal Engine.</div>
+<div class="line">These are the users saved Export Operator presets. These are built inside Blender’s export menu. This allows the user to use a vast amount of different workflows with my tool.</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>“default”</em> preset is built by me with an emphasis for exporting to Unreal Engine.</p>
 </div>
 <hr></section>
 <section id="naming">
@@ -204,22 +200,22 @@
 <p>Depending on exporting mode you might not be able to select functionality. Batch Export locks the base naming to each objects corresponding Blender name.</p>
 </div>
 <div class="line-block">
-<div class="line"><strong>Active Collection</strong></div>
+<div class="line">1. <strong>Active Collection</strong></div>
 <div class="line">The active collection’s name will be used as the export name.</div>
 </div>
 <div class="line-block">
-<div class="line"><strong>Active Object</strong></div>
+<div class="line">2. <strong>Active Object</strong></div>
 <div class="line">If selected, the active object will be used as the output base name.</div>
 </div>
 <div class="line-block">
-<div class="line"><strong>Prompt Output Name</strong></div>
+<div class="line">3. <strong>Prompt Output Name</strong></div>
 <div class="line">The user will be prompted for the base export name.</div>
 </div>
-<p>When batch exporting, each output will be named its corresponding mesh name.</p>
+<p>When batch exporting, each output will be named its corresponding mesh name. Reference <a class="reference internal" href="#moderef"><span class="std std-ref">Mode</span></a>.</p>
 <div class="line-block">
 <div class="line">If you are using the prompted exporter, don’t fill out the name in Blender’s exporter. This tool will automatically use the name of your selected mesh.</div>
 <div class="line"><br /></div>
-<div class="line">If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.</div>
+<div class="line">If you are using the <em>“Direct Export”</em> method, there is no worry about accidentally effecting your export name, everything happens behind the scenes.  Reference <a class="reference internal" href="#direct"><span class="std std-ref">Direct Export</span></a>.</div>
 </div>
 </section>
 <section id="prefix-and-suffix">
@@ -237,37 +233,37 @@
 <h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h2>
 <p><em>To show advanced options, toggle the cogwheel in the panel menu.</em></p>
 <section id="direct-export">
-<h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
+<span id="direct"></span><h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
 <div class="line-block">
-<div class="line">If selected, the <em>Export Selection</em> button will utilize the user defined path and automatically export without any further user input.</div>
+<div class="line">If selected, upon exporting there is nothing else needed by the user. The exporter will use the defined path and automatically export without any further input.</div>
 <div class="line"><br /></div>
-<div class="line">If <strong>not</strong> selected, the <em>Export Selection</em> button will prompt the user for a destination to export everytime.</div>
+<div class="line">If <strong>not</strong> selected, upon exporting their will be a prompt for the user to select a destination to export everytime.</div>
 </div>
-<hr></section>
+</section>
 <section id="force-single-user">
 <h3>Force Single User<a class="headerlink" href="#force-single-user" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">When exporting, if any objects are linked, they will become single users.</div>
 </div>
-<hr></section>
+</section>
 <section id="open-folder-on-export">
 <h3>Open Folder On Export<a class="headerlink" href="#open-folder-on-export" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">After exported, the destination folder will be opened.</div>
 </div>
-<hr></section>
+</section>
 <section id="open-docs">
 <h3>Open Docs<a class="headerlink" href="#open-docs" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Opens <strong>darrow.tools/EasyExport</strong> in the default web browser.</div>
 </div>
-<hr></section>
+</section>
 <section id="open-presets">
 <h3>Open Presets<a class="headerlink" href="#open-presets" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This opens the path to Blender’s user preset files. These python files are editable, and offers a different method to edit export presets.</div>
 </div>
-<hr></section>
+</section>
 <section id="edit-defaults">
 <h3>Edit Defaults<a class="headerlink" href="#edit-defaults" title="Permalink to this heading"></a></h3>
 <div class="line-block">
