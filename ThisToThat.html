@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>This To That &mdash; DarrowTools</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/logo_link.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex" />
+    <link rel="search" title="Search" href="search" />
+ 
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-139465643-2");
+    pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index" class="icon icon-home"> DarrowTools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Blender Addons</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EasyExport">EasyExport</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingTools">ModelingTools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SceneOrganizer">SceneOrganizer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index">DarrowTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">This To That</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="this-to-that">
+<h1>This To That<a class="headerlink" href="#this-to-that" title="Permalink to this heading"></a></h1>
+<p><strong>This To That</strong> Blender baking tools drastically improves the baking process between Blender, Marmoset, and Substance Painter.</p>
+<p>This tool includes time-saving-features such as bakegroups, auto match high/low names, one-click high/low exporting, open in marmoset, open in painter, and more!</p>
+<p>Keep reading to learn about the available tools and their explanations!</p>
+<!-- https://github.com/paulirish/lite-youtube-embed -->
+<div>
+<link rel="stylesheet" href="./_static/css/lite-yt-embed.css" />
+<script src="./_static/lite-yt-embed.js"></script>
+<lite-youtube videoid="gbh6HjmqH60" style="background-image: url('https://i3.ytimg.com/vi/gbh6HjmqH60/hqdefault.jpg');">
+<button type="button" class="lty-playbtn">
+   <span class="lyt-visually-hidden">EasyExport</span>
+</button>
+</div>
+<hr><section id="installation">
+<span id="dinstall"></span><h2>1. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><strong>Download</strong></p>
+<p>Purchase the addon and then download the latest release from <strong>BlenderDepot</strong>. You can also see all available source files after purchasing this Addon.</p>
+</li>
+<li><p><strong>Install</strong></p>
+<p>Under Blender’s Preference’s window, find the <strong>Add-ons</strong> tab, click <strong>install</strong> and then select the recently downloaded zip file.</p>
+</li>
+<li><p><strong>Enable</strong></p>
+<p>Search for <strong>This to That</strong> inside the <strong>Add-ons</strong> tab and enable the checkbox by its name. After enabling the addon, restart Blender.</p>
+</li>
+<li><p><strong>Update Addon</strong></p>
+<p>Before updating, it is suggested to save your user preferences. See <a class="reference internal" href="#duserprefs"><span class="std std-ref">2.3.1. User Preferences</span></a></p>
+</li>
+</ul>
+<hr></section>
+<section id="addon-preferences">
+<span id="daddonprefs"></span><h2>2. Addon Preferences<a class="headerlink" href="#addon-preferences" title="Permalink to this heading"></a></h2>
+<p>To navigate to these settings, first go to Blender’s Preference’s window and then find the <strong>Add-ons</strong> tab.
+Search for <strong>This to That</strong> and select the dropdown icon by its name. You will see the catagories below in an expandable menu format.</p>
+<section id="general-settings">
+<span id="dgenset"></span><h3>2.1 General Settings<a class="headerlink" href="#general-settings" title="Permalink to this heading"></a></h3>
+<section id="default-paths">
+<span id="ddefaultpaths"></span><h4>2.1.1. Default Paths<a class="headerlink" href="#default-paths" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Marmoset Executable</strong></p>
+<p>Path to local Marmoset executable. Both Marmoset 3 and 4 are supported.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The majority of testing was done on Marmoset 3, please send Marmoset 4 bugs to <a class="reference external" href="mailto:contact&#37;&#52;&#48;darrow&#46;tools">contact<span>&#64;</span>darrow<span>&#46;</span>tools</a></p>
+</div>
+</li>
+<li><p><strong>Painter Executable</strong></p>
+<p>Path to local Substance Painter executable. Both Steam edition and the standard edition are supported.</p>
+<p>If you are using the steam edition, please see <a class="reference internal" href="#dimportantinfo"><span class="std std-ref">2.4. Important Information</span></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For full feature support please use Substance Painter 2022 or older. If 2022+ is not used, mesh map refreshing/setting might not function correctly.</p>
+</div>
+</li>
+<li><p><strong>Default Project</strong></p>
+<p>This is the Addon’s default project path. All generated folders and save files will be output to this destination.</p>
+<p>See <a class="reference internal" href="#doutdest"><span class="std std-ref">2.2. Output Destinations</span></a> to customize folder and file generation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When creating new assets this is the order for the initial project path. Each property will inherit its parent value.</p>
+<ul>
+<li><p>Asset Project Path</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>(<a class="reference internal" href="#dfiltermenu"><span class="std std-ref">4.3. Filter Menu</span></a>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Scene Project Path</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>(<a class="reference internal" href="#dscenesettings"><span class="std std-ref">3. Scene Settings</span></a>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Default Project Path</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>(<a class="reference internal" href="#ddefaultpaths"><span class="std std-ref">2.1.1. Default Paths</span></a>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>For example: When creating a new asset, the “Scene Project” is checked. If empty, then the “Default Project” is used.
+Lastly, if “Default Project” is empty, the .blend file location is used.</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="object-names">
+<span id="dobjnames"></span><h4>2.1.2. Object Names<a class="headerlink" href="#object-names" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>‘High’ Suffix</strong></p>
+<p>Desired suffix to identify high poly objects and collections.</p>
+</li>
+<li><p><strong>‘Low’ Suffix</strong></p>
+<p>Desired suffix to identify low poly objects and collections.</p>
+</li>
+<li><p><strong>Successful Match Prefix</strong></p>
+<p>The prefix to be added to successfully matched object names. This string can be blank.</p>
+</li>
+<li><p><strong>Pre-named Prefix</strong></p>
+<p>The prefix to be added to successfully matched object names if one of the two pre-named settings is enabled. This string shouldn’t be blank, with <strong>bake</strong> as default.</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="output-destinations">
+<span id="doutdest"></span><h3>2.2. Output Destinations<a class="headerlink" href="#output-destinations" title="Permalink to this heading"></a></h3>
+<p>Each Output type has the follow available options.</p>
+<ul>
+<li><p><strong>Parent Folder</strong></p>
+<p>The destination folder where this output type will be generated. This folder can be another output location, project destination, or a custom destination.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is possible to get caught in a parent folder loop.</p>
+</div>
+</li>
+<li><p><strong>Sub-folder / Save File</strong></p>
+<p>Boolean option to either create a sub-folder as a child of the parent, or save the file depending on the output type.</p>
+</li>
+<li><p><strong>Sub-folder name</strong></p>
+<p>If create sub-folder / save file is TRUE, the new sub folder name.</p>
+</li>
+</ul>
+<section id="output-folders">
+<span id="doutfolder"></span><h4>2.2.1. Output Folders<a class="headerlink" href="#output-folders" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>FBX</strong></p>
+<p>The destination folder for the high and low poly fbx models.</p>
+</li>
+<li><p><strong>Textures</strong></p>
+<p>The texture export location for Substance Painter</p>
+</li>
+<li><p><strong>Bake Textures</strong></p>
+<p>The bake texture export location from Marmoset Toolbag</p>
+</li>
+</ul>
+</section>
+<section id="save-files">
+<span id="doutfile"></span><h4>2.2.2. Save Files<a class="headerlink" href="#save-files" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>.tbscene</strong></p>
+<p>The save file for Marmoset Toolbag</p>
+</li>
+<li><p><strong>.spp</strong></p>
+<p>The save file for Substance Painter</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="preference-files">
+<span id="dpreffile"></span><h3>2.3 Preference Files<a class="headerlink" href="#preference-files" title="Permalink to this heading"></a></h3>
+<p>Here you can find all the information about saving and loading user preferences, presets, and the texture map file.</p>
+<section id="user-preferences">
+<span id="duserprefs"></span><h4>2.3.1. User Preferences<a class="headerlink" href="#user-preferences" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>User Prefs File</strong></p>
+<p>Points to the user preferences json file location. Opens a file browser to select json file.</p>
+</li>
+<li><p><strong>Export User Prefs</strong></p>
+<p>Export current preferences to json file. This allows you to distribute the json file to other Blender versions, co-workers, or to simply backup your preferences.</p>
+</li>
+<li><p><strong>Load User Prefs</strong></p>
+<p>Import user preferences from json file.</p>
+</li>
+<li><p><strong>Edit User Prefs</strong></p>
+<p>Open user preferences json file in default text editor.</p>
+</li>
+</ul>
+</section>
+<section id="asset-presets">
+<span id="dassetpreset"></span><h4>2.3.2. Asset Presets<a class="headerlink" href="#asset-presets" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Bake Asset Preset Folder</strong></p>
+<p>Folder location to create and load asset presets from. Defaults to Blender config in app data.</p>
+</li>
+</ul>
+</section>
+<section id="fbx-exporting">
+<span id="dfbxexport"></span><h4>2.3.3. FBX Exporting<a class="headerlink" href="#fbx-exporting" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Export Preset</strong></p>
+<p>Edit the default FBX export preset in the default text editor. This preset system is Blender’s FBX preset system.</p>
+</li>
+</ul>
+</section>
+<section id="texture-list">
+<span id="dtexlist"></span><h4>2.3.4. Texture List<a class="headerlink" href="#texture-list" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Texture Map File</strong></p>
+<p>Points to the texture map file where all texture map information can be found. Defaults to Blender config in app data.</p>
+</li>
+<li><p><strong>Edit Texture Maps</strong></p>
+<p>Edit the texture map file in the default text editor.</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="important-information">
+<span id="dimportantinfo"></span><h3>2.4. Important Information<a class="headerlink" href="#important-information" title="Permalink to this heading"></a></h3>
+<section id="substance-painter">
+<span id="dsubpainterinfo"></span><h4>2.4.1. Substance Painter<a class="headerlink" href="#substance-painter" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Steam edition</strong></p>
+<p>Shows a pop-up of important steam edition information.</p>
+</li>
+<li><p><strong>Launch Options to Add</strong></p>
+<p>String of commands to add to Steam client Substance Painter launch commands.</p>
+</li>
+<li><p><strong>Launch Options Added</strong></p>
+<p>Boolean if launch options have been added by the user inside Steam.</p>
+</li>
+</ul>
+<hr></section>
+</section>
+</section>
+<section id="scene-settings">
+<span id="dscenesettings"></span><h2>3. Scene Settings<a class="headerlink" href="#scene-settings" title="Permalink to this heading"></a></h2>
+<section id="scene-project">
+<span id="dscenepro"></span><h3>3.1. Scene Project<a class="headerlink" href="#scene-project" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Scene Project</strong></p>
+<p>Scene’s default project path. All newly created assets will inherit this file path.</p>
+</li>
+</ul>
+</section>
+<section id="auto-match">
+<span id="dautomatchsettings"></span><h3>3.2. Auto Match<a class="headerlink" href="#auto-match" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Apply Modifiers</strong></p>
+<p>Upon running the “Auto Match” operation, all objects associated with the asset will have their modifiers applied, parents, cleared, and transformations applied.
+This is useful if there is a lot of geometry being applied through your modifier stack and you want to insure the most successful auto match operation.</p>
+</li>
+<li><p><strong>Match Origins</strong></p>
+<p>When matching names, should objects have matching origin points for the match to be successful.
+There is a very small tolerance percentage behind the scenes to allow for some minor differences.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If enabled and multiple objects are still unmatched, turn this setting and <strong>iterate match searching</strong> off, and re-run the matcher to catch more objects.</p>
+</div>
+</li>
+<li><p><strong>Max Origin Distance</strong></p>
+<p>The maximum distance between any two objects origin point to be considered a “match”. (What units are we using here?)</p>
+</li>
+<li><p><strong>Iterate Matching</strong></p>
+<p>Should the matcher run until the <strong>padding step size</strong> hits 75. This will aid in catching objects to be matched.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Larger poly counts will increase wait times drastically.</p>
+</div>
+</li>
+<li><p><strong>Iterate Step Size</strong></p>
+<p>The amount of padding to increase on every match run. Lower values will give higher match accuracy. Higher values will give lower match accuracy. Default is 1.</p>
+</li>
+<li><p><strong>Search Padding</strong></p>
+<p>Manual padding size to match names with, if <strong>iterate matching</strong> is off. Lower values offer higher chances of successful matches.
+This is a dimensional padding percentage per axis. Essentially meaning tolerance. If you have few objects to match and low amounts of overlap, this number can be confidently larger.
+However, if you have lots of objects that overlap, it is recommend to start at zero and slowly increase.
+If this is the case, it is better to enable iterate match searching and avoid manual use.</p>
+</li>
+</ul>
+</section>
+<section id="export">
+<span id="dexport"></span><h3>3.3. Export<a class="headerlink" href="#export" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Triangulate</strong></p>
+<p>On export add a Triangulate modifier to each object, if one is not already present in the modifier stack.</p>
+</li>
+</ul>
+</section>
+<section id="collections">
+<span id="dcoll"></span><h3>3.4. Collections<a class="headerlink" href="#collections" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Delete with bake asset</strong></p>
+<p>On removal of an asset from the bake list, delete the associated collections and move all children objects to the master scene collection.</p>
+</li>
+</ul>
+</section>
+<section id="ui">
+<span id="dui"></span><h3>3.5. UI<a class="headerlink" href="#ui" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Advanced</strong></p>
+<p>Toggle the UI to show advanced operations.</p>
+</li>
+<li><p><strong>Show Copying Tools</strong></p>
+<p>Toggle the UI to show manual copy operations.</p>
+</li>
+<li><p><strong>Copy Collections</strong>
+If enabled, the functionality of the <strong>Mark</strong> buttons will be changed allowing for the ability to select and mark collections instead of objects. This is enabled by default.
+If disabled, the functionality of the <strong>Mark</strong> buttons will be a standard object selection.</p>
+<div class="line-block">
+<div class="line">The <strong>Mark</strong> buttons icon will visually indicate this setting. If enabled, a collection icon will appear. If disabled, a object icon will appear.</div>
+</div>
+</li>
+</ul>
+<hr></section>
+</section>
+<section id="bake-asset-list">
+<span id="dbakelist"></span><h2>4. Bake Asset List<a class="headerlink" href="#bake-asset-list" title="Permalink to this heading"></a></h2>
+<p>This is where you can find the bake assets associated with your Blender scene. This is a list of collections that stores data associated with the new bake group.
+We can change information on a per asset level, allowing you to switch the working bake group easily and retain the relevant information.</p>
+<section id="list-operations">
+<span id="dlistops"></span><h3>4.1. List Operations<a class="headerlink" href="#list-operations" title="Permalink to this heading"></a></h3>
+<section id="add">
+<span id="dadd"></span><h4>4.1.1. Add<a class="headerlink" href="#add" title="Permalink to this heading"></a></h4>
+<p>Add asset is located on the bake assets panel, visually indicated by a plus symbol. Upon selection, a new pop-up menu will appear with the following information.</p>
+<ul>
+<li><p><strong>Name</strong></p>
+<ul>
+<li><p><strong>Create New</strong></p>
+<p>Create new names for every object. The new object name is built from an optional prefix, asset name, object number, and suffix</p>
+</li>
+<li><p><strong>Highs Pre-named</strong></p>
+<p>The low objects will inherit the corresponding name upon object matching.</p>
+</li>
+<li><p><strong>Lows Pre-named</strong></p>
+<p>The high objects will inherit the corresponding name upon object matching.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Create From</strong></p></li>
+<li><p><strong>Mesh Names</strong></p></li>
+<li><p><strong>Preset</strong></p></li>
+</ul>
+</section>
+<section id="remove">
+<span id="dremove"></span><h4>4.1.2. Remove<a class="headerlink" href="#remove" title="Permalink to this heading"></a></h4>
+<p>Remove asset is located on the bake assets panel, visually indicated by a minus symbol.
+With a bake asset selected this will remove all associated information including the linked bake group objects. This will not delete the original objects.</p>
+</section>
+</section>
+<section id="per-asset-operations">
+<span id="dperassetop"></span><h3>4.2. Per Asset Operations<a class="headerlink" href="#per-asset-operations" title="Permalink to this heading"></a></h3>
+<section id="reset">
+<span id="dresetop"></span><h4>4.2.1. Reset<a class="headerlink" href="#reset" title="Permalink to this heading"></a></h4>
+<p>Found directly under the bake asset list item, this will delete all objects and collections that are children of the bake_group collection and re-build the bakegroup.</p>
+</section>
+<section id="original">
+<span id="doriginal"></span><h4>4.2.2. Original<a class="headerlink" href="#original" title="Permalink to this heading"></a></h4>
+<p>Found directly under the bake asset list item, this will toggle the visibility of the non-modified original collection.</p>
+</section>
+<section id="linked">
+<span id="dlinked"></span><h4>4.2.3. Linked<a class="headerlink" href="#linked" title="Permalink to this heading"></a></h4>
+<p>Found directly under the bake asset list item, this will toggle the visibility of the generated bake_group collection.</p>
+</section>
+</section>
+<section id="filter-menu">
+<span id="dfiltermenu"></span><h3>4.3. Filter Menu<a class="headerlink" href="#filter-menu" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Preset</strong></p>
+<p>Preset file to autofil asset and scene settings with.</p>
+</li>
+<li><p><strong>Project</strong></p>
+<p>Output destination for generated file structure and exports. See <a class="reference internal" href="#doutdest"><span class="std std-ref">2.2. Output Destinations</span></a> to customize these new folders and save files.</p>
+</li>
+</ul>
+<section id="dgensettings">
+<span id="id1"></span><h4>4.3.1. General Settings<a class="headerlink" href="#dgensettings" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Maps</strong></p>
+<p>Maps to enable inside Marmoset. This will also be sent to Substance Painter. If the map has correct Painter usage set up, it will be loaded into that mesh map slot.</p>
+</li>
+</ul>
+</section>
+<section id="marmoset-toolbag">
+<span id="dmarmotoolbag"></span><h4>4.3.2. Marmoset Toolbag<a class="headerlink" href="#marmoset-toolbag" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Auto Bake</strong></p>
+<p>Optional property to automatically bake using the settings defined in this panel whenever Marmoset is opened.
+This property is recommend to be off if baking complex objects that need fine tuning inside Marmoset.</p>
+</li>
+<li><p><strong>Texture Size</strong></p>
+<p>Size of the exported textures when baking.</p>
+</li>
+<li><p><strong>Bake Samples</strong></p>
+<p>Target amount of samples to bake at.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>64x samples is not supported through Marmoset API. If you would like this amount of samples, manually select this property inside Marmoset.</p>
+</div>
+</li>
+<li><p><strong>Output Format</strong></p>
+<p>Target bits per channel to export.</p>
+</li>
+<li><p><strong>Minimum Cage Offset</strong></p>
+<p>Default minimum cage offset.</p>
+</li>
+<li><p><strong>Maximum Cage Offset</strong></p>
+<p>Default maximum cage offset.</p>
+</li>
+<li><p><strong>Flip Normals</strong></p>
+<p>Whether or not the Y channel of the normal map should be flipped.</p>
+</li>
+<li><p><strong>Texture Sets</strong></p>
+<p>Should Marmoset bake on different texture sets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this option is enabled, auto bake is enabled, and you are using Marmoset 3, auto bake will not properly run.</p>
+</div>
+</li>
+<li><p><strong>Ambient Occlusion Distance</strong></p>
+<p>Maximum search distance for ambient occlusion.</p>
+</li>
+</ul>
+</section>
+<section id="dsubpainter">
+<span id="id2"></span><h4>4.3.3. Substance Painter<a class="headerlink" href="#dsubpainter" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Texture Size</strong></p>
+<p>Document resolution for Substance Painter.</p>
+</li>
+<li><p><strong>Format</strong></p>
+<p>Project Normal Map format.</p>
+</li>
+<li><p><strong>Existing Scene</strong></p>
+<p>If you have an existing project <strong>outside</strong> of this tools created save files, specify it here. <a class="reference internal" href="#dopenpaintadv"><span class="std std-ref">5.2.5. Open Asset In Painter</span></a> will recognize this as the new save file.</p>
+</li>
+<li><p><strong>Template</strong></p>
+<p>Substance Painter .spt file to create new projects from.</p>
+</li>
+</ul>
+<hr></section>
+</section>
+</section>
+<section id="operations">
+<span id="dops"></span><h2>5. Operations<a class="headerlink" href="#operations" title="Permalink to this heading"></a></h2>
+<section id="simple-mode">
+<span id="dsimpleop"></span><h3>5.1. Simple Mode<a class="headerlink" href="#simple-mode" title="Permalink to this heading"></a></h3>
+<p>Simple mode is not recommended for overly complex objects as the wait time can be high and Blender can become unresponsive for lengthy periods of time.
+It is recommended to manually run through the steps using advanced mode if your objects need extra love.</p>
+<p>Simple mode wraps the functions of <a class="reference internal" href="#dadvancedmode"><span class="std std-ref">5.2. Advanced Mode</span></a> into two easy steps.</p>
+<section id="open-in-marmoset">
+<span id="dopenmarmo"></span><h4>5.1.1. Open in Marmoset<a class="headerlink" href="#open-in-marmoset" title="Permalink to this heading"></a></h4>
+<p>This will exceute the following:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#dautomatch"><span class="std std-ref">5.2.1. Setup and Auto Match</span></a></p></li>
+<li><p><a class="reference internal" href="#dexporthighlow"><span class="std std-ref">5.2.3. Export High/Low</span></a></p></li>
+<li><p><a class="reference internal" href="#dopenmarmoadv"><span class="std std-ref">5.2.4. Open Asset In Marmoset</span></a></p></li>
+</ul>
+</section>
+<section id="open-in-painter">
+<span id="dopenpaint"></span><h4>5.1.2. Open in Painter<a class="headerlink" href="#open-in-painter" title="Permalink to this heading"></a></h4>
+<p>See <a class="reference internal" href="#dopenpaintadv"><span class="std std-ref">5.2.5. Open Asset In Painter</span></a>.</p>
+<hr></section>
+</section>
+<section id="advanced-mode">
+<span id="dadvancedmode"></span><h3>5.2. Advanced Mode<a class="headerlink" href="#advanced-mode" title="Permalink to this heading"></a></h3>
+<p>Advanced mode allows for complete control of the high to low baking process and this tool’s unique features.
+Throughout this process you are always welcome to make changes to the duplicated objects, rename them, and move them to the proper matched collection.</p>
+<section id="setup-and-auto-match">
+<span id="dautomatch"></span><h4>5.2.1. Setup and Auto Match<a class="headerlink" href="#setup-and-auto-match" title="Permalink to this heading"></a></h4>
+<p>All high and low poly objects associated with this asset will try to be matched together using their origin points, distance from each other, dimensional box, and ray-casting.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These settings can be edited under <a class="reference internal" href="#dscenesettings"><span class="std std-ref">3. Scene Settings</span></a></p>
+</div>
+<p>If any two objects are matched, they will be renamed and moved to a new “MATCHED” collection nested inside the bake group collection.
+The new names are built from your name settings when you created a new asset.</p>
+</section>
+<section id="match-selected">
+<span id="dmatchsel"></span><h4>5.2.2. Match Selected<a class="headerlink" href="#match-selected" title="Permalink to this heading"></a></h4>
+<p>With so much behind the scenes happening here, its best to learn from trial and error how this works.
+However, generally speaking, you shouldn’t have any confusion with this tool, as it “works” for whatever your selection is.</p>
+<p>With any object selected, <strong>Match Selected</strong> becomes available. There are numerous operations happening behind the scenes depending on your selection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These operations will only happen if the selected objects are children of the bake group collection.
+Additionally, this action is reversible, so no need to worry if you match wrong objects.</p>
+</div>
+<ul class="simple">
+<li><p>If <strong>ONE</strong> low poly object is selected, it is considered a new match.</p></li>
+<li><p>If <strong>ONE</strong> low poly object and <strong>ONE</strong> high poly object are selected, it is considered a new match.</p></li>
+<li><p>If <strong>ONE</strong> low poly object and <strong>ANY</strong> high poly objects are selected, all high poly objects are matched with the low poly object.</p></li>
+<li><p>If <strong>NO</strong> low poly objects, <strong>ONE</strong> matched high poly, and <strong>ANY</strong> unmatched high poly objects are selected, the unmatched highs will be matched with the matched high.</p>
+<ul>
+<li><p>This matches floaters.</p></li>
+</ul>
+</li>
+<li><p>If <strong>ONE</strong> low poly object, <strong>NO</strong> matched high poly, and <strong>ANY</strong> unmatched high poly objects are selected, the unmatched highs will be matched with the matched low.</p>
+<ul>
+<li><p>This also matches floaters.</p></li>
+</ul>
+</li>
+<li><p>If <strong>NO</strong> low poly objects, <strong>ANY</strong> matched high poly, and <strong>ANY</strong> unmatched high poly objects are selected, the unmatched highs will be matched with the <strong>ACTIVE</strong> matched high.</p></li>
+</ul>
+<p>This list is <strong>not</strong> dependant on selection order.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a selection is invalid, nothing will happen.</p>
+</div>
+</section>
+<section id="export-high-low">
+<span id="dexporthighlow"></span><h4>5.2.3. Export High/Low<a class="headerlink" href="#export-high-low" title="Permalink to this heading"></a></h4>
+<p>This will export all objects in both the low matched and high matched collections. All respective objects will be combined at export meaning there will be two FBXs created.
+This will utilize an FBX export preset which can be found and edited under <a class="reference internal" href="#duserprefs"><span class="std std-ref">2.3.1. User Preferences</span></a>.</p>
+<p>The FBXs will be located in the user defined export scheme found under <a class="reference internal" href="#doutdest"><span class="std std-ref">2.2. Output Destinations</span></a>.</p>
+</section>
+<section id="open-asset-in-marmoset">
+<span id="dopenmarmoadv"></span><h4>5.2.4. Open Asset In Marmoset<a class="headerlink" href="#open-asset-in-marmoset" title="Permalink to this heading"></a></h4>
+<p>Using the selected bake asset’s <a class="reference internal" href="#dmarmotoolbag"><span class="std std-ref">4.3.2. Marmoset Toolbag</span></a> settings and exported FBXs, this will open the Marmoset executable defined in <a class="reference internal" href="#ddefaultpaths"><span class="std std-ref">2.1.1. Default Paths</span></a>.</p>
+<p>If you have save files enabled, upon re-running this tool, this will search for the existing save file and open it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will <strong>always</strong> open a new instance of Marmoset Toolbag.</p>
+</div>
+</section>
+<section id="open-asset-in-painter">
+<span id="dopenpaintadv"></span><h4>5.2.5. Open Asset In Painter<a class="headerlink" href="#open-asset-in-painter" title="Permalink to this heading"></a></h4>
+<p>Using the selected bake asset’s <a class="reference internal" href="#dsubpainter"><span class="std std-ref">4.3.3. Substance Painter</span></a> settings, this will open the Painter executable defined in <a class="reference internal" href="#ddefaultpaths"><span class="std std-ref">2.1.1. Default Paths</span></a> with launch arguments.
+If you are using Steam, please see <a class="reference internal" href="#dimportantinfo"><span class="std std-ref">2.4. Important Information</span></a> inside addon preferences.</p>
+<p>If Substance Painter is already open, this tool will attempt to save the existing open project first.
+If you have save files enabled this will search for an existing save file and if found, open it. If there is not a save file found, a new project will be created.</p>
+<p>If you have a template defined in your asset settings, the newly created Painter project will utilize that.
+Additionally, if you have an existing scene declared inside your asset settings, this function will utilize that desired project instead of searching for the save file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only <strong>one</strong> instance of Substance Painter will ever be open when using this tool.</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Blake Darrow.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
