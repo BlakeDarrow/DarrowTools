@@ -102,7 +102,7 @@ Blender addon for managing your viewport and outliner. Allows for easy sorts and
 .. raw:: html
 
    <div>
-   <lite-youtube videoid="EOLpj38DQwU" style="background-image: url('https://img.youtube.com/vi/EOLpj38DQwU/maxresdefault.jpg');">
+   <lite-youtube videoid="HMqXFaop4W0" style="background-image: url('https://img.youtube.com/vi/HMqXFaop4W0/hqdefault.jpg');">
    <button type="button" class="lty-playbtn">
       <span class="lyt-visually-hidden">ModelingTools</span>
    </button>
