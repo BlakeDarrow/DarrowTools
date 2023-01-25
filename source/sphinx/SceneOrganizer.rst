@@ -25,9 +25,9 @@ SceneOrganizer is simple tool that allows the user to manage some display option
    <div>
    <link rel="stylesheet" href="./_static/css/lite-yt-embed.css" />  
    <script src="./_static/lite-yt-embed.js"></script>
-   <lite-youtube videoid="EOLpj38DQwU" style="background-image: url('https://img.youtube.com/vi/EOLpj38DQwU/maxresdefault.jpg');">
+   <lite-youtube videoid="HMqXFaop4W0" style="background-image: url('https://img.youtube.com/vi/HMqXFaop4W0/hqdefault.jpg');">
    <button type="button" class="lty-playbtn">
-   <span class="lyt-visually-hidden">SceneOrganizer</span>
+      <span class="lyt-visually-hidden">ModelingTools</span>
    </button>
    </div>
    <hr> 
