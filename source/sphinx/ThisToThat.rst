@@ -8,6 +8,12 @@ This tool includes time-saving-features such as bakegroups, auto match high/low 
 
 Keep reading to learn about the available tools and their explanations!
 
+:ref:`1. installation` |
+:ref:`2. addon preferences` |
+:ref:`3. scene settings` |
+:ref:`4. bake asset list` | 
+:ref:`5. operations` 
+
 .. raw:: html
 
    <!-- https://github.com/paulirish/lite-youtube-embed -->
@@ -40,7 +46,7 @@ Keep reading to learn about the available tools and their explanations!
 
 -  **Update Addon**
 
-   Before updating, it is suggested to save your user preferences. See :ref:`duserprefs` 
+ .. important:: **Before updating**, it is suggested to save your user preferences. See :ref:`duserprefs` 
 
 .. raw:: html
     
@@ -190,7 +196,7 @@ Here you can find all the information about saving and loading user preferences,
 
 -  **User Prefs File**
 
-   Points to the user preferences json file location. Opens a file browser to select json file.
+   Points to a user preferences json file location. Opens a file browser to select json file.
   
 -  **Export User Prefs**
  
@@ -264,7 +270,7 @@ Here you can find all the information about saving and loading user preferences,
 
 .. _dSceneSettings:
 
-3. Scene Settings
+1. Scene Settings
 -----------------
 
 .. _dScenePro:
@@ -377,24 +383,35 @@ Add asset is located on the bake assets panel, visually indicated by a plus symb
 
 -  **Name**
   
-   -  **Create New**
-
-      Create new names for every object. The new object name is built from an optional prefix, asset name, object number, and suffix
-
-   -  **Highs Pre-named**
-
-      The low objects will inherit the corresponding name upon object matching.
-
-   -  **Lows Pre-named**
-
-      The high objects will inherit the corresponding name upon object matching.
-
+      Name of the new bake asset. This will default to the active collection, or active object depending on the settings below. This value can **always** be overwritten.
 
 -  **Create From**
 
+   -  **Collection**
+
+      Using the **active** collection, the tool will search through its children collections and look for "low" and "high" in the **collection** names. All objects found in said collections will be used for the tool.
+
+   -  **Selection**  
+
+      Using the actively selected **objects**, and then choosing whether said selection are high or low poly assets.
+
 -  **Mesh Names**
 
+   -  **Create New**
+
+      This will create new names for all copied objects. The objects name will inherit the asset's name plus a sequential number and optional prefix found in :ref:`2. addon preferences`
+  
+   -  **Highs Pre-named**
+
+      If the original objects have already been properly named, this will copy the high objects names over in addition to a new required bake prefix defined in addon preference. This prefix is required due to the fact that the object names would then be the exact same as the copied objects, thus adding unnecessary numerical suffix's.
+
+   -  **Lows Pre-named**
+
+      If the original objects have already been properly named, this will copy the low objects names over in addition to a new required bake prefix defined in addon preference. This prefix is required due to the fact that the object names would then be the exact same as the copied objects, thus adding unnecessary numerical suffix's.
+
 -  **Preset**
+
+   -  Create from user generated presets.
 
 .. _dRemove:
 
