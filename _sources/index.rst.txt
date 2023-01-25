@@ -2,9 +2,10 @@
 Introduction
 #########################
 
-DarrowTools is a collection of Blender tools I have created for my workflow. Currently released tool features include: easy FBX exporting, scene management, modeling tools, and bake assisting!
-All Blender addons are written for versions above 2.80+.
-| Darrow.tools is written and maintained by `BlakeDarrow`_. 
+DarrowTools is a collection of Blender tools I have created for my workflow. Currently released tool features include easy FBX exporting, scene and object management, modeling tools, and bake assisting!
+
+| All Blender addons are written for versions above 2.80+
+| darrow.tools is written and maintained by `BlakeDarrow`_. 
 
 .. _BlakeDarrow: https://linktr.ee/blakedarrow
 
@@ -14,6 +15,7 @@ All Blender addons are written for versions above 2.80+.
    :glob:
    :caption: Blender Addons
 
+   ThisToThat
    EasyExport
    ModelingTools
    SceneOrganizer
@@ -22,11 +24,33 @@ All Blender addons are written for versions above 2.80+.
   
    <hr> 
 
+.. _ThisToThat: This to That
+
 .. _EasyExport: EasyExport
 
 .. _ModelingTools: ModelingTools
 
 .. _SceneOrganizer: SceneOrganizer
+
+
+`ThisToThat`_
+-----------------------
+
+**This To That** Blender baking tools drastically improves the baking process between Blender, Marmoset, and Substance Painter.
+
+.. raw:: html
+
+   <!-- https://github.com/paulirish/lite-youtube-embed -->
+   <div>
+   <link rel="stylesheet" href="./_static/css/lite-yt-embed.css" />  
+   <script src="./_static/lite-yt-embed.js"></script>
+   <lite-youtube videoid="gbh6HjmqH60" style="background-image: url('https://img.youtube.com/vi/gbh6HjmqH60/maxresdefault.jpg');">
+   <button type="button" class="lty-playbtn">
+      <span class="lyt-visually-hidden">ThisToThat</span>
+   </button>
+   </div>
+   <hr> 
+
 
 `EasyExport`_
 -----------------------
