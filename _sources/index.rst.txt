@@ -24,7 +24,7 @@ DarrowTools is a collection of Blender tools I have created for my workflow. Cur
   
    <hr> 
 
-.. _ThisToThat: This to That
+.. _ThisToThat: This To That
 
 .. _EasyExport: EasyExport
 
