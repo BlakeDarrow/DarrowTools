@@ -270,7 +270,7 @@ Here you can find all the information about saving and loading user preferences,
 
 .. _dSceneSettings:
 
-1. Scene Settings
+3. Scene Settings
 -----------------
 
 .. _dScenePro:
