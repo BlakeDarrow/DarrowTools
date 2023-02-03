@@ -2,10 +2,9 @@
 Introduction
 #########################
 
-DarrowTools is a collection of Blender tools I have created for my workflow. Currently released tool features include easy FBX exporting, scene and object management, modeling tools, and bake assisting!
+DarrowTools is a collection of Blender tools I have created for my workflow. Currently released tool features include easy FBX exporting, scene and object management, modeling tools, and bake tools!
 
-| All Blender addons are written for versions above 2.80+
-| darrow.tools is written and maintained by `BlakeDarrow`_. 
+| Blender addons are written for versions above 2.80+ and created by `BlakeDarrow`_. 
 
 .. _BlakeDarrow: https://linktr.ee/blakedarrow
 

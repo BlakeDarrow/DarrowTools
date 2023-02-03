@@ -8,6 +8,8 @@
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -19,6 +21,8 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/logo_link.js"></script>
+        <script src="_static/dark_mode_js/default_light.js"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex" />
     <link rel="search" title="Search" href="search" />
@@ -154,30 +158,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="this-to-that">
+  <a class="reference external image-reference" href="https://blendermarket.com/products/this-to-that/"><img alt="https://img.shields.io/badge/purchase-Blender%20Market-blue" src="https://img.shields.io/badge/purchase-Blender%20Market-blue" /></a>
+<a class="reference external image-reference" href="https://blendermarket.com/products/this-to-that/"><img alt="https://img.shields.io/badge/standard%20license-$15-blue" src="https://img.shields.io/badge/standard%20license-$15-blue" /></a>
+<hr><section id="this-to-that">
 <h1>This To That<a class="headerlink" href="#this-to-that" title="Permalink to this heading"></a></h1>
-<p><strong>This To That</strong> Blender baking tools drastically improves the baking process between Blender, Marmoset, and Substance Painter.</p>
-<p>This tool includes time-saving-features such as bakegroups, auto match high/low names, one-click high/low exporting, open in marmoset, open in painter, and more!</p>
-<p>Keep reading to learn about the available tools and their explanations!</p>
+<p>With just one button, you can rule them all! A single click can instantly name and match all of your high and low poly meshes.</p>
 <p><a class="reference internal" href="#installation"><span class="std std-ref">1. Installation</span></a> |
 <a class="reference internal" href="#addon-preferences"><span class="std std-ref">2. Addon Preferences</span></a> |
 <a class="reference internal" href="#scene-settings"><span class="std std-ref">3. Scene Settings</span></a> |
 <a class="reference internal" href="#bake-asset-list"><span class="std std-ref">4. Bake Asset List</span></a> |
 <a class="reference internal" href="#operations"><span class="std std-ref">5. Operations</span></a></p>
+<img alt="_images/CoolBox_Test_001.png" src="_images/CoolBox_Test_001.png" />
+<p>As a 3D artist, you’re likely familiar with the tedious task of naming high and low poly meshes. Imagine this: you’ve spent days working on a great gun model, but you realize you haven’t named any of your assets. Now you have to find, match, and assign 500 meshes to each other before you can move on to the baking process. This addon eliminates the naming step by automatically matching mesh names to each other. So, when you finish an asset with 500 unmatched names, you can simply press “auto match” and voila, you’re ready to move on to the baking stage.</p>
+<p>But that’s not all - this tool also creates a direct link between Marmoset and Blender to Substance Painter! This means that changes to your mesh or texture maps can be solved with a single click. No more tedious reimporting of texture maps or reloading meshes - just press “Open In Painter” and all of your files will be up to date for texturing in Substance Painter.</p>
+<p>This tool includes other time-saving features such as auto collection management, high/low exporting, the ability to open in Marmoset, and much more!</p>
 <!-- https://github.com/paulirish/lite-youtube-embed -->
 <div>
 <link rel="stylesheet" href="./_static/css/lite-yt-embed.css" />
 <script src="./_static/lite-yt-embed.js"></script>
-<lite-youtube videoid="gbh6HjmqH60" style="background-image: url('https://i3.ytimg.com/vi/gbh6HjmqH60/hqdefault.jpg');">
+<lite-youtube videoid="gbh6HjmqH60" style="background-image: url('https://img.youtube.com/vi/gbh6HjmqH60/maxresdefault.jpg');">
 <button type="button" class="lty-playbtn">
-   <span class="lyt-visually-hidden">EasyExport</span>
+   <span class="lyt-visually-hidden">ThisToThat</span>
 </button>
 </div>
 <hr><section id="installation">
 <span id="dinstall"></span><h2>1. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>The Standard license is $15 USD and the studio license is $50 USD. This tool can be purchased from <a class="reference external" href="https://blendermarket.com/products/this-to-that/">Blender Depot</a>.  This tool is released under <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0</a>.</p>
 <ul>
 <li><p><strong>Download</strong></p>
-<p>Purchase the addon and then download the latest release from <strong>BlenderDepot</strong>. You can also see all available source files after purchasing this Addon.</p>
+<p>Download the latest release from <a class="reference external" href="https://blendermarket.com/products/this-to-that/">Blender Depot</a>. You can also see all available source files after purchasing this Addon.</p>
 </li>
 <li><p><strong>Install</strong></p>
 <p>Under Blender’s Preference’s window, find the <strong>Add-ons</strong> tab, click <strong>install</strong> and then select the recently downloaded zip file.</p>
@@ -185,14 +194,11 @@
 <li><p><strong>Enable</strong></p>
 <p>Search for <strong>This to That</strong> inside the <strong>Add-ons</strong> tab and enable the checkbox by its name. After enabling the addon, restart Blender.</p>
 </li>
-<li><p><strong>Update Addon</strong></p></li>
 </ul>
-<blockquote>
-<div><div class="admonition important">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Before updating</strong>, it is suggested to save your user preferences. See <a class="reference internal" href="#duserprefs"><span class="std std-ref">2.3.1. User Preferences</span></a></p>
 </div>
-</div></blockquote>
 <hr></section>
 <section id="addon-preferences">
 <span id="daddonprefs"></span><h2>2. Addon Preferences<a class="headerlink" href="#addon-preferences" title="Permalink to this heading"></a></h2>
@@ -318,6 +324,10 @@ Lastly, if “Default Project” is empty, the .blend file location is used.</p>
 <section id="preference-files">
 <span id="dpreffile"></span><h3>2.3 Preference Files<a class="headerlink" href="#preference-files" title="Permalink to this heading"></a></h3>
 <p>Here you can find all the information about saving and loading user preferences, presets, and the texture map file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Preferences will be reset whenever you update the tool or a change Blender versions. Before this happens, export your <strong>This To That</strong> preferences to your disk for later importing.</p>
+</div>
 <section id="user-preferences">
 <span id="duserprefs"></span><h4>2.3.1. User Preferences<a class="headerlink" href="#user-preferences" title="Permalink to this heading"></a></h4>
 <ul>
@@ -365,6 +375,10 @@ Lastly, if “Default Project” is empty, the .blend file location is used.</p>
 </section>
 <section id="important-information">
 <span id="dimportantinfo"></span><h3>2.4. Important Information<a class="headerlink" href="#important-information" title="Permalink to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If there are any required steps you need to take for external applications to link properly, they will be shown here.</p>
+</div>
 <section id="substance-painter">
 <span id="dsubpainterinfo"></span><h4>2.4.1. Substance Painter<a class="headerlink" href="#substance-painter" title="Permalink to this heading"></a></h4>
 <ul>
@@ -398,6 +412,15 @@ Lastly, if “Default Project” is empty, the .blend file location is used.</p>
 <p>Upon running the “Auto Match” operation, all objects associated with the asset will have their modifiers applied, parents, cleared, and transformations applied.
 This is useful if there is a lot of geometry being applied through your modifier stack and you want to insure the most successful auto match operation.</p>
 </li>
+<li><p><strong>Search Padding %</strong></p>
+<p>Padding percent to try and match names with. Lower values tend to offer higher chances of successful matches.
+This is a dimensional padding percentage per axis. Essentially meaning tolerance. If you have few objects to match and low amounts of overlap, this number can be confidently larger.
+However, if you have lots of objects that overlap, it is recommend to start at zero and slowly increase.
+If this is the case, it is better to enable iterate match searching and avoid manual use.</p>
+</li>
+<li><p><strong>Iteration Amount</strong></p>
+<p>The amount of iterations to run the auto matcher. Search padding % starts at zero and increases until target count is hit. If this is zero the matcher will run one time at your desired search padding.</p>
+</li>
 <li><p><strong>Match Origins</strong></p>
 <p>When matching names, should objects have matching origin points for the match to be successful.
 There is a very small tolerance percentage behind the scenes to allow for some minor differences.</p>
@@ -408,22 +431,6 @@ There is a very small tolerance percentage behind the scenes to allow for some m
 </li>
 <li><p><strong>Max Origin Distance</strong></p>
 <p>The maximum distance between any two objects origin point to be considered a “match”. (What units are we using here?)</p>
-</li>
-<li><p><strong>Iterate Matching</strong></p>
-<p>Should the matcher run until the <strong>padding step size</strong> hits 75. This will aid in catching objects to be matched.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Larger poly counts will increase wait times drastically.</p>
-</div>
-</li>
-<li><p><strong>Iterate Step Size</strong></p>
-<p>The amount of padding to increase on every match run. Lower values will give higher match accuracy. Higher values will give lower match accuracy. Default is 1.</p>
-</li>
-<li><p><strong>Search Padding</strong></p>
-<p>Manual padding size to match names with, if <strong>iterate matching</strong> is off. Lower values offer higher chances of successful matches.
-This is a dimensional padding percentage per axis. Essentially meaning tolerance. If you have few objects to match and low amounts of overlap, this number can be confidently larger.
-However, if you have lots of objects that overlap, it is recommend to start at zero and slowly increase.
-If this is the case, it is better to enable iterate match searching and avoid manual use.</p>
 </li>
 </ul>
 </section>
@@ -539,7 +546,7 @@ With a bake asset selected this will remove all associated information including
 </li>
 </ul>
 <section id="dgensettings">
-<span id="id1"></span><h4>4.3.1. General Settings<a class="headerlink" href="#dgensettings" title="Permalink to this heading"></a></h4>
+<span id="id2"></span><h4>4.3.1. General Settings<a class="headerlink" href="#dgensettings" title="Permalink to this heading"></a></h4>
 <ul>
 <li><p><strong>Maps</strong></p>
 <p>Maps to enable inside Marmoset. This will also be sent to Substance Painter. If the map has correct Painter usage set up, it will be loaded into that mesh map slot.</p>
@@ -548,6 +555,10 @@ With a bake asset selected this will remove all associated information including
 </section>
 <section id="marmoset-toolbag">
 <span id="dmarmotoolbag"></span><h4>4.3.2. Marmoset Toolbag<a class="headerlink" href="#marmoset-toolbag" title="Permalink to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Marmoset Toolbag 4 is the recommended version to use.</p>
+</div>
 <ul>
 <li><p><strong>Auto Bake</strong></p>
 <p>Optional property to automatically bake using the settings defined in this panel whenever Marmoset is opened.
@@ -588,7 +599,11 @@ This property is recommend to be off if baking complex objects that need fine tu
 </ul>
 </section>
 <section id="dsubpainter">
-<span id="id2"></span><h4>4.3.3. Substance Painter<a class="headerlink" href="#dsubpainter" title="Permalink to this heading"></a></h4>
+<span id="id3"></span><h4>4.3.3. Substance Painter<a class="headerlink" href="#dsubpainter" title="Permalink to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Substance Painter 2022+ is the <strong>highly</strong> recommended version to use.</p>
+</div>
 <ul>
 <li><p><strong>Texture Size</strong></p>
 <p>Document resolution for Substance Painter.</p>
@@ -708,17 +723,8 @@ Additionally, if you have an existing scene declared inside your asset settings,
 
            </div>
           </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Blake Darrow.</p>
-  </div>
-
-   
-
-</footer>
+          <hr>
+<p>© Copyright 2023, Blake Darrow.</p>
         </div>
       </div>
     </section>
