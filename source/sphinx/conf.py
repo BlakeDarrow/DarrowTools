@@ -46,4 +46,4 @@ html_show_sphinx = False
 
 html_theme = 'rtd'
 
-default_dark_mode = False
+default_dark_mode = True
