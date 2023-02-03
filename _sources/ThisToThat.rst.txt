@@ -25,7 +25,7 @@ As a 3D artist, you're likely familiar with the tedious task of naming high and 
 
 But that's not all - this tool also creates a direct link between Marmoset and Blender to Substance Painter! This means that changes to your mesh or texture maps can be solved with a single click. No more tedious reimporting of texture maps or reloading meshes - just press "Open In Painter" and all of your files will be up to date for texturing in Substance Painter.
 
-This tool includes other time-saving features such as auto collection management, high/low exporting, the ability to open in Marmoset, and much more!
+This tool includes other time-saving features such as auto collection management, high/low exporting, the ability to open in Marmoset, open in Painter, and much more!
 
 .. raw:: html
 
