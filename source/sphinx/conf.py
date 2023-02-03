@@ -1,17 +1,7 @@
 
-import sphinx_rtd_theme
-
-extensions = [
-    'sphinx_rtd_theme',
-    'sphinx.ext.githubpages',
-    'sphinx.ext.autosectionlabel',
-]
-
 html_title = 'DarrowTools'
 
 html_short_title = "DarrowTools"
-
-html_theme = "sphinx_rtd_theme"
 
 html_theme_options = {
     'style_external_links': False,
@@ -24,11 +14,15 @@ project = 'DarrowTools'
 copyright = '2022, Blake Darrow'
 author = 'Blake Darrow'
 
+extensions = [
+    'sphinx_rtd_dark_mode',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.autosectionlabel',
+]
+
 templates_path = ['_templates']
 
 exclude_patterns = []
-
-html_theme = 'sphinx_rtd_theme'
 
 html_show_sourcelink = False
 
@@ -40,10 +34,6 @@ html_static_path = [
     '_static',
 ]
 
-extensions = [
-    'sphinx.ext.autosectionlabel',
-]
-
 html_js_files = [
     'logo_link.js',
 ]
@@ -52,6 +42,8 @@ html_css_files = [
     'css/custom.css',
 ]
 
-html_style = 'css/theme.css'
-
 html_show_sphinx = False
+
+html_theme = 'rtd'
+
+default_dark_mode = False

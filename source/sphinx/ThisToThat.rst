@@ -1,12 +1,17 @@
+.. image:: https://img.shields.io/badge/purchase-Blender%20Market-blue
+    :target: https://blendermarket.com/products/this-to-that/
+.. image:: https://img.shields.io/badge/standard%20license-$15-blue
+    :target: https://blendermarket.com/products/this-to-that/
+
+.. raw:: html
+
+   <hr> 
+
 ##############
 This To That
 ##############
 
-**This To That** Blender baking tools drastically improves the baking process between Blender, Marmoset, and Substance Painter.
-
-This tool includes time-saving-features such as bakegroups, auto match high/low names, one-click high/low exporting, open in marmoset, open in painter, and more!
-
-Keep reading to learn about the available tools and their explanations!
+With just one button, you can rule them all! A single click can instantly name and match all of your high and low poly meshes.
 
 :ref:`1. installation` |
 :ref:`2. addon preferences` |
@@ -14,15 +19,23 @@ Keep reading to learn about the available tools and their explanations!
 :ref:`4. bake asset list` | 
 :ref:`5. operations` 
 
+.. image:: /media/CoolBox_Test_001.png
+   
+As a 3D artist, you're likely familiar with the tedious task of naming high and low poly meshes. Imagine this: you've spent days working on a great gun model, but you realize you haven't named any of your assets. Now you have to find, match, and assign 500 meshes to each other before you can move on to the baking process. This addon eliminates the naming step by automatically matching mesh names to each other. So, when you finish an asset with 500 unmatched names, you can simply press "auto match" and voila, you're ready to move on to the baking stage.
+
+But that's not all - this tool also creates a direct link between Marmoset and Blender to Substance Painter! This means that changes to your mesh or texture maps can be solved with a single click. No more tedious reimporting of texture maps or reloading meshes - just press "Open In Painter" and all of your files will be up to date for texturing in Substance Painter.
+
+This tool includes other time-saving features such as auto collection management, high/low exporting, the ability to open in Marmoset, and much more!
+
 .. raw:: html
 
    <!-- https://github.com/paulirish/lite-youtube-embed -->
    <div>
    <link rel="stylesheet" href="./_static/css/lite-yt-embed.css" />  
    <script src="./_static/lite-yt-embed.js"></script>
-   <lite-youtube videoid="gbh6HjmqH60" style="background-image: url('https://i3.ytimg.com/vi/gbh6HjmqH60/hqdefault.jpg');">
+   <lite-youtube videoid="gbh6HjmqH60" style="background-image: url('https://img.youtube.com/vi/gbh6HjmqH60/maxresdefault.jpg');">
    <button type="button" class="lty-playbtn">
-      <span class="lyt-visually-hidden">EasyExport</span>
+      <span class="lyt-visually-hidden">ThisToThat</span>
    </button>
    </div>
    <hr> 
@@ -32,9 +45,11 @@ Keep reading to learn about the available tools and their explanations!
 1. Installation
 ---------------
 
+The Standard license is $15 USD and the studio license is $50 USD. This tool can be purchased from `Blender Depot <https://blendermarket.com/products/this-to-that/>`_.  This tool is released under `GPL-3.0 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_.
+ 
 -  **Download**
 
-   Purchase the addon and then download the latest release from **BlenderDepot**. You can also see all available source files after purchasing this Addon.
+   Download the latest release from `Blender Depot <https://blendermarket.com/products/this-to-that/>`_. You can also see all available source files after purchasing this Addon.
 
 -  **Install**
 
@@ -44,9 +59,7 @@ Keep reading to learn about the available tools and their explanations!
 
    Search for **This to That** inside the **Add-ons** tab and enable the checkbox by its name. After enabling the addon, restart Blender.
 
--  **Update Addon**
-
- .. important:: **Before updating**, it is suggested to save your user preferences. See :ref:`duserprefs` 
+.. important:: **Before updating**, it is suggested to save your user preferences. See :ref:`duserprefs` 
 
 .. raw:: html
     
@@ -189,6 +202,8 @@ Each Output type has the follow available options.
 
 Here you can find all the information about saving and loading user preferences, presets, and the texture map file.
 
+.. note:: Preferences will be reset whenever you update the tool or a change Blender versions. Before this happens, export your **This To That** preferences to your disk for later importing.
+
 .. _dUserPrefs:
 
 2.3.1. User Preferences
@@ -246,6 +261,7 @@ Here you can find all the information about saving and loading user preferences,
 2.4. Important Information
 +++++++++++++++++++++++++++
 
+.. important:: If there are any required steps you need to take for external applications to link properly, they will be shown here.
 
 .. _dSubPainterInfo:
 
@@ -292,6 +308,18 @@ Here you can find all the information about saving and loading user preferences,
    Upon running the "Auto Match" operation, all objects associated with the asset will have their modifiers applied, parents, cleared, and transformations applied.
    This is useful if there is a lot of geometry being applied through your modifier stack and you want to insure the most successful auto match operation.
 
+
+-  **Search Padding %**
+
+   Padding percent to try and match names with. Lower values tend to offer higher chances of successful matches. 
+   This is a dimensional padding percentage per axis. Essentially meaning tolerance. If you have few objects to match and low amounts of overlap, this number can be confidently larger.
+   However, if you have lots of objects that overlap, it is recommend to start at zero and slowly increase.
+   If this is the case, it is better to enable iterate match searching and avoid manual use.
+
+-  **Iteration Amount**
+
+   The amount of iterations to run the auto matcher. Search padding % starts at zero and increases until target count is hit. If this is zero the matcher will run one time at your desired search padding.
+
 -  **Match Origins**
 
    When matching names, should objects have matching origin points for the match to be successful.
@@ -302,23 +330,6 @@ Here you can find all the information about saving and loading user preferences,
 -  **Max Origin Distance**
 
    The maximum distance between any two objects origin point to be considered a "match". (What units are we using here?)
-
--  **Iterate Matching**
-
-   Should the matcher run until the **padding step size** hits 75. This will aid in catching objects to be matched. 
-
-   .. warning:: Larger poly counts will increase wait times drastically.
-
--  **Iterate Step Size**
-
-   The amount of padding to increase on every match run. Lower values will give higher match accuracy. Higher values will give lower match accuracy. Default is 1.
-
--  **Search Padding**
-
-   Manual padding size to match names with, if **iterate matching** is off. Lower values offer higher chances of successful matches. 
-   This is a dimensional padding percentage per axis. Essentially meaning tolerance. If you have few objects to match and low amounts of overlap, this number can be confidently larger.
-   However, if you have lots of objects that overlap, it is recommend to start at zero and slowly increase.
-   If this is the case, it is better to enable iterate match searching and avoid manual use.
 
 .. _dExport:
 
@@ -474,6 +485,8 @@ Found directly under the bake asset list item, this will toggle the visibility o
 4.3.2. Marmoset Toolbag
 ************************
 
+.. note:: Marmoset Toolbag 4 is the recommended version to use.
+
 -  **Auto Bake**
 
    Optional property to automatically bake using the settings defined in this panel whenever Marmoset is opened.
@@ -519,6 +532,8 @@ Found directly under the bake asset list item, this will toggle the visibility o
 
 4.3.3. Substance Painter
 ************************
+
+.. note:: Substance Painter 2022+ is the **highly** recommended version to use.
 
 -  **Texture Size**
 
