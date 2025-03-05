@@ -1,28 +1,27 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EasyExport &mdash; DarrowTools</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6db74536" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/logo_link.js"></script>
-        <script src="_static/dark_mode_js/default_dark.js"></script>
-        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=929261d2"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/logo_link.js?v=308c045d"></script>
+      <script src="_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex" />
     <link rel="search" title="Search" href="search" />
@@ -46,11 +45,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index" class="icon icon-home"> DarrowTools
+
+          
+          
+          <a href="index" class="icon icon-home">
+            DarrowTools
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -75,6 +78,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#direct-export">Direct Export</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#force-single-user">Force Single User</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#open-folder-on-export">Open Folder On Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-socketing">Experimental Socketing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#open-docs">Open Docs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#open-presets">Open Presets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#edit-defaults">Edit Defaults</a></li>
@@ -100,7 +104,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index" class="icon icon-home"></a></li>
+      <li><a href="index" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">EasyExport</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -110,10 +114,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/releases/latest"><img alt="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport" src="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport" /></a>
-<a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/commits/main"><img alt="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" src="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" /></a>
+  <a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/releases/latest"><img alt="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport" src="https://img.shields.io/github/v/release/BlakeDarrow/EasyExport" />
+</a>
+<a class="reference external image-reference" href="https://github.com/BlakeDarrow/EasyExport/commits/main"><img alt="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" src="https://img.shields.io/github/last-commit/BlakeDarrow/EasyExport" />
+</a>
 <hr><section id="easyexport">
-<h1>EasyExport<a class="headerlink" href="#easyexport" title="Permalink to this heading"></a></h1>
+<h1>EasyExport<a class="headerlink" href="#easyexport" title="Link to this heading"></a></h1>
 <div class="line-block">
 <div class="line">Easy FBX Exporting for Blender with just a click. This tool allows you to not worry about settings or naming conventions, and simply hit export and forget about it. Using standard blender export presets, this tools allows you to easily export your selected objects.</div>
 <div class="line"><br /></div>
@@ -135,11 +141,11 @@
 </button>
 </div>
 <hr><section id="download">
-<span id="downloadexportertag"></span><h2>Download<a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
+<span id="downloadexportertag"></span><h2>Download<a class="headerlink" href="#download" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="https://github.com/BlakeDarrow/EasyExport/releases/latest">Latest Release</a> | <a class="reference external" href="https://github.com/BlakeDarrow/EasyExport/tree/main/EasyExport">Source</a></p>
 <hr></section>
 <section id="installation">
-<span id="install"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<span id="install"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Download the latest release from github.</p></li>
 <li><p>Under addon preferences in Blender, click ‘install’ and the select the recently downloaded zip file.</p></li>
@@ -151,7 +157,7 @@
 </div>
 <hr></section>
 <section id="mode">
-<span id="moderef"></span><h2>Mode<a class="headerlink" href="#mode" title="Permalink to this heading"></a></h2>
+<span id="moderef"></span><h2>Mode<a class="headerlink" href="#mode" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">1. <strong>Batch Exporting</strong></div>
 <div class="line">If <em>“Batch Export”</em> is selected, upon exporting, every object selected will be exported separately and output with their corresponding mesh name.</div>
@@ -163,7 +169,7 @@
 </div>
 <hr></section>
 <section id="object-location">
-<h2>Object Location<a class="headerlink" href="#object-location" title="Permalink to this heading"></a></h2>
+<h2>Object Location<a class="headerlink" href="#object-location" title="Link to this heading"></a></h2>
 <p>Depending on your exporting mode you will get two separate options.</p>
 <div class="line-block">
 <div class="line">1. <strong>Active Origin</strong></div>
@@ -175,7 +181,7 @@
 <p>If left unselected, the output will be at world origin (0,0,0).</p>
 <hr></section>
 <section id="path">
-<span id="pathsettings"></span><h2>Path<a class="headerlink" href="#path" title="Permalink to this heading"></a></h2>
+<span id="pathsettings"></span><h2>Path<a class="headerlink" href="#path" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">Selecting the folder icon next to the string will prompt the user for a destination path. If <em>“Direct Export”</em> is enabled, when exporting, the object(s) will be directly exported to this path.</div>
 <div class="line">(This path is absolute, not relative)</div>
@@ -183,7 +189,7 @@
 <p>Once a path is selected, <em>“Open Export Folder”</em> will allow you to navigate directly to the folder in Windows Explorer.</p>
 <hr></section>
 <section id="presets">
-<span id="presetssettings"></span><h2>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h2>
+<span id="presetssettings"></span><h2>Presets<a class="headerlink" href="#presets" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">These are the users saved Export Operator presets. These are built inside Blender’s export menu. This allows the user to use a vast amount of different workflows with my tool.</div>
 </div>
@@ -193,9 +199,9 @@
 </div>
 <hr></section>
 <section id="naming">
-<span id="namingsettings"></span><h2>Naming<a class="headerlink" href="#naming" title="Permalink to this heading"></a></h2>
+<span id="namingsettings"></span><h2>Naming<a class="headerlink" href="#naming" title="Link to this heading"></a></h2>
 <section id="base-name">
-<h3>Base Name<a class="headerlink" href="#base-name" title="Permalink to this heading"></a></h3>
+<h3>Base Name<a class="headerlink" href="#base-name" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">When batch exporting, each objects base name will be its corresponding mesh name. Reference <a class="reference internal" href="#moderef"><span class="std std-ref">Mode</span></a>.</div>
 </div>
@@ -222,7 +228,7 @@
 </div>
 </section>
 <section id="prefix-and-suffix">
-<h3>Prefix and Suffix<a class="headerlink" href="#prefix-and-suffix" title="Permalink to this heading"></a></h3>
+<h3>Prefix and Suffix<a class="headerlink" href="#prefix-and-suffix" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">When exporting with a suffix, you can either add a “high, “low”, or custom tag, but only one. Additionally, if “high” or “low” is selected, you cannot choose a custom suffix. These are “either or” operations. Not both.</div>
 <div class="line"><br /></div>
@@ -233,10 +239,10 @@
 <hr></section>
 </section>
 <section id="advanced">
-<h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h2>
+<h2>Advanced<a class="headerlink" href="#advanced" title="Link to this heading"></a></h2>
 <p><em>To show advanced options, toggle the cogwheel in the panel header.</em></p>
 <section id="direct-export">
-<span id="direct"></span><h3>Direct Export<a class="headerlink" href="#direct-export" title="Permalink to this heading"></a></h3>
+<span id="direct"></span><h3>Direct Export<a class="headerlink" href="#direct-export" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">If selected, upon exporting there is nothing else needed by the user. The exporter will use the defined path and automatically export without any further input.</div>
 <div class="line"><br /></div>
@@ -244,38 +250,105 @@
 </div>
 </section>
 <section id="force-single-user">
-<h3>Force Single User<a class="headerlink" href="#force-single-user" title="Permalink to this heading"></a></h3>
+<h3>Force Single User<a class="headerlink" href="#force-single-user" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">When exporting, if any objects are linked, they will become single users.</div>
 </div>
 </section>
 <section id="open-folder-on-export">
-<h3>Open Folder On Export<a class="headerlink" href="#open-folder-on-export" title="Permalink to this heading"></a></h3>
+<h3>Open Folder On Export<a class="headerlink" href="#open-folder-on-export" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">After exported, the destination folder will be opened.</div>
 </div>
 </section>
+<section id="experimental-socketing">
+<h3>Experimental Socketing<a class="headerlink" href="#experimental-socketing" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">Generally speaking, this is for advanced users as it requires additional external code. This option allows EasyExport to connect to local ports so that commands can be remotely sent when the user selects “Export Selection”. By default only FBX is supported. Additionally, if you wish to setup a connection, you must have another application such as Maya setup to listen on a port. By default this addon will send the fbxImport(Maya) command to port 12345 with the exported path from Blender.</div>
+<div class="line"><br /></div>
+<div class="line">If anyone actually uses this, please reach out on github via an issue and request further customization or application support.</div>
+<div class="line"><br /></div>
+<div class="line">Example Maya plugin:</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_client</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span> <span class="n">addr</span><span class="p">):</span>
+      <span class="k">try</span><span class="p">:</span>
+         <span class="n">command</span> <span class="o">=</span> <span class="n">client_socket</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+         <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Execute the received command</span>
+            <span class="n">exec</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Executing: </span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># Send back any errors</span>
+            <span class="n">client_socket</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+         <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Or confirm successful execution</span>
+            <span class="n">client_socket</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="s2">&quot;Command executed successfully.&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+
+      <span class="k">finally</span><span class="p">:</span>
+         <span class="n">client_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">start_server</span><span class="p">():</span>
+      <span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+      <span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="mi">12345</span><span class="p">))</span>
+      <span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Server is listening...&quot;</span><span class="p">)</span>
+
+      <span class="k">try</span><span class="p">:</span>
+         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">client_socket</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connection from </span><span class="si">{</span><span class="n">addr</span><span class="si">}</span><span class="s2"> has been established.&quot;</span><span class="p">)</span>
+
+            <span class="n">client_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">handle_client</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span> <span class="n">addr</span><span class="p">))</span>
+            <span class="n">client_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+      <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Server shutting down.&quot;</span><span class="p">)</span>
+      <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+         <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+
+      <span class="k">finally</span><span class="p">:</span>
+         <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">run_server</span><span class="p">():</span>
+      <span class="n">server_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">start_server</span><span class="p">)</span>
+      <span class="n">server_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mayaFbxImport</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+      <span class="n">utils</span><span class="o">.</span><span class="n">executeDeferred</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;FBX&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="s2">&quot;fbx&quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+      <span class="n">run_server</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
 <section id="open-docs">
-<h3>Open Docs<a class="headerlink" href="#open-docs" title="Permalink to this heading"></a></h3>
+<h3>Open Docs<a class="headerlink" href="#open-docs" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Opens <strong>darrow.tools/EasyExport</strong> in the default web browser.</div>
 </div>
 </section>
 <section id="open-presets">
-<h3>Open Presets<a class="headerlink" href="#open-presets" title="Permalink to this heading"></a></h3>
+<h3>Open Presets<a class="headerlink" href="#open-presets" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This opens the path to Blender’s user preset files. These python files are editable, and offers a different method to edit export presets.</div>
 </div>
 </section>
 <section id="edit-defaults">
-<h3>Edit Defaults<a class="headerlink" href="#edit-defaults" title="Permalink to this heading"></a></h3>
+<h3>Edit Defaults<a class="headerlink" href="#edit-defaults" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This opens my custom default preset in your default text-editor.</div>
 </div>
 <hr></section>
 </section>
 <section id="help">
-<span id="helptag"></span><h2>Help<a class="headerlink" href="#help" title="Permalink to this heading"></a></h2>
+<span id="helptag"></span><h2>Help<a class="headerlink" href="#help" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Restart Blender</p></li>
 <li><p>Enable “EasyExport” in preferences -&gt; addons</p></li>
